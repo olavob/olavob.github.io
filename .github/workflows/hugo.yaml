@@ -47,6 +47,9 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+          caches:
+            images:
+              dir: :cacheDir/images
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

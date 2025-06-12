@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wsl on Olavo Bilac&#39;s Blog</title>
+    <link>https://olavodotpy.github.io/tags/wsl/</link>
+    <description>Recent content in Wsl on Olavo Bilac&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jun 2025 01:11:42 -0300</lastBuildDate>
+    <atom:link href="https://olavodotpy.github.io/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resolvendo O Erro **Missing X Server or Display** Do WSL2.</title>
+      <link>https://olavodotpy.github.io/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/</link>
+      <pubDate>Thu, 12 Jun 2025 01:11:42 -0300</pubDate>
+      <guid>https://olavodotpy.github.io/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/</guid>
+      <description>&lt;h2 id=&#34;contexto-do-problema&#34;&gt;Contexto do Problema&lt;/h2&gt;&#xA;&lt;p&gt;Essa documentação foi criada porque estou mexendo com a parte de redes de sockets, IP, portas e Servidores HTTP. Que coincidentemente bateu com a resolução desse problema. Porém vamos deixar de lado a parte dos servidores HTTP e vamos falar de outro servidor, o X.&lt;/p&gt;&#xA;&lt;p&gt;Graças ao sistema limitado da microsoft, o Windows, tive que reconfigurar meu linux pela milésima vez, mais especificamente o ArchWSL no WSL 2. Antes disso eu usava uma Distro Linux(distribuição Linux) dentro de uma máquina virtual apenas para escrever código, entretanto minha RAM que já é pouca, apenas 8gb, utilizando uma VM reduzindo esse valor pela metade, e quando falamos de ambientes gráficos(ainda mais do Gnome) estamos falando da maior parte da minha preciosa RAM sendo desperdiçada com janelas e área de trabalho.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

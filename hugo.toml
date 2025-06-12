@@ -1,6 +1,8 @@
 baseURL = 'https://olavodotpy.github.io/'
-languageCode = 'pt-br'
-title = 'olavodotpy Blog'
+defaultContentLanguage = "pt-br"
+languageCode = 'en'
+enableRobotsTXT = true
+title = "Olavo Bilac's Blog"
 theme = "gokarna"
 
 [menu]
@@ -19,13 +21,10 @@ theme = "gokarna"
     name = "Tags"
     url = "/tags/"
     weight = 2
-    
+
   [[menu.main]]
-    # Unique identifiers are required for menu entries without a name property,
-    # or for menu entries which re-use a name
     identifier = "github"
 
-    # Absolute URL to external resource
     url = "https://github.com/olavodotpy"
     weight = 3
     
@@ -34,8 +33,21 @@ theme = "gokarna"
     pre = "<span data-feather='github'></span>"
     post = ""
 
-[markup]
-  [markup.tableOfContents]
-    startLevel = 1
-    endLevel = 3
-    ordered = false
+[params]
+  accentColor = "#C0C0C0"
+
+  avatarURL = "https://avatars.githubusercontent.com/u/137653930?s=400&u=91a5a2db87e4ec6dfd60ce15574210de410e828f&v=4"
+
+  avatarAltText = "olavodotpy"
+
+  description = "“O universo pode não ser infinito, mas as possibilidades nele, essa é outra história” —Okabe Rintarou"
+
+  footer = "Olavo B. A. Neto"
+
+  metaKeywords = ["blog", "gokarna", "hugo", "Programador", "olavodotpy"]
+
+  numberPostsOnHomePage = 2
+
+  showPostsOnHomePage = "popular"
+
+  togglePreviousAndNextButtons = true

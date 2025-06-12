@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windons on Olavo Bilac&#39;s Blog</title>
+    <link>http://localhost:1313/tags/windons/</link>
+    <description>Recent content in Windons on Olavo Bilac&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jun 2025 01:11:42 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/windons/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resolvendo O Erro **Missing X Server or Display** Do WSL2.</title>
+      <link>http://localhost:1313/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/</link>
+      <pubDate>Thu, 12 Jun 2025 01:11:42 -0300</pubDate>
+      <guid>http://localhost:1313/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

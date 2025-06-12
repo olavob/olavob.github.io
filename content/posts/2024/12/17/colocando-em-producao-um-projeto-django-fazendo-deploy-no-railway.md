@@ -1,9 +1,9 @@
 ---
 date: 2024-12-17T22:52:34-03:00
 draft: false
-title: Production
+title: "**Deployando** um projeto Django!! Colocando em **produção no Railway.**"
 type: "post"
-tags: ['django', 'produção', 'railway', 'gunicorn']
+tags: ['django', 'produção', 'railway', 'gunicorn', 'debugging']
 ---
 
 ### Introdução
