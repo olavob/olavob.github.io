@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on olavodotpy Blog</title>
+    <link>https://olavodotpy.github.io/tags/</link>
+    <description>Recent content in Tags on olavodotpy Blog</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 17 Dec 2024 22:52:34 -0300</lastBuildDate>
+    <atom:link href="https://olavodotpy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django</title>
+      <link>https://olavodotpy.github.io/tags/django/</link>
+      <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
+      <guid>https://olavodotpy.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gunicorn</title>
+      <link>https://olavodotpy.github.io/tags/gunicorn/</link>
+      <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
+      <guid>https://olavodotpy.github.io/tags/gunicorn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Produção</title>
+      <link>https://olavodotpy.github.io/tags/produ%C3%A7%C3%A3o/</link>
+      <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
+      <guid>https://olavodotpy.github.io/tags/produ%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Railway</title>
+      <link>https://olavodotpy.github.io/tags/railway/</link>
+      <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
+      <guid>https://olavodotpy.github.io/tags/railway/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
