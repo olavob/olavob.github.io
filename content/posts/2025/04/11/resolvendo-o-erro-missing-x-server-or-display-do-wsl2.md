@@ -62,7 +62,7 @@ Quando fui executar deu o erro, ```Missing X server or $DISPLAY```, tentei dar o
 export DISPLAY=$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 ```
 
-Ou até mesmo executar o Chromium com as Flags:
+Ou até mesmo executar o Chromium com algumas Flags:
 
 ```bash
 chromium --no-sandbox --disable-dev-shm-usage --use-gl=angle --disable-gpu
@@ -77,7 +77,7 @@ $DISPLAY. Então, vamos começar a destrinchar para entendermos o erro bobo que 
 
 Primeiro vamos entender o arquivo do diretório ```/etc/resolv.conf```
 
-Dentro do seu navegador quando se acessa https://www.google.com vai certamente abrir magicamente a página do mecanismo de pesquisa google. Porém, se falamos mais tecnicamente, porque não acessar o google com seu endereço IP direto algo como http://142.250.79.4:80? Já que todos os sites têm endereços IP que podem se comunicar via WebSockets com um cliente(navegador) ou com os próprios servidores internos para aí sim ter a resposta que já é esperada. Então, porque usar o DNS, a resposta é simples: é mais fácil e memorável, porém os benefícios de um DNS(Domain Name System) não acabam aí.
+Dentro do seu navegador quando se acessa https://www.google.com vai certamente abrir magicamente a página do mecanismo de pesquisa google. Porém, se falamos mais tecnicamente, porque não acessar o google com seu endereço IP direto? algo como http://142.250.79.4:80 Já que todos os sites têm endereços IP que podem se comunicar via WebSockets com um cliente(navegador) ou com os próprios servidores internos para aí sim ter a resposta que já é esperada. Então, porque usar o DNS, a resposta é simples: é mais fácil e memorável, porém os benefícios de um DNS(Domain Name System) não acabam aí.
 
 Endereços IPs variam de acordo com o dispositivo e da região geográfica, já que depende do balanceador de carga do Google para selecionar o servidor. Por isso google.com é uma forma padrão que calibra automaticamente o IP da sua região ou do seu dispositivo no DNS.
 
@@ -85,42 +85,57 @@ A função principal do ```resolv.conf``` é configurar parâmetros e listar IPs
 
 O WSL não possui um canal de rede própria já que é integrado com o Windows. então quando vemos o resolv.conf, o valor de nameserver é o endereço do gateway local do roteador que funciona como um proxy do DNS, que é o que o windows usa para encaminhar as consultas nos servidores DNS.
 
-Ou seja, precisaremos de um IP do seu host para colocar no $DISPLAY. Não o IP do proxy do fuc** roteador TP-LINK da banda larga sei lá das quantas que tem na sua cidade.
+Ou seja, precisaremos de um IP do seu host Hyper-v para colocar no $DISPLAY. Não o IP do proxy do fuc** roteador TP-LINK da banda larga sei lá das quantas que tem na sua cidade.
 
 Bem, esse é o ponto crítico, a parte fácil que não sabemos. Agora vamos colocar o servidor X para funcionar.
 
-O comando Export é a pior forma de resolver esse problema no WSL, porém deu a mim a pista mais importante da resolução já que o $DISPLAY precisava de um IP para que o meu WSL pudesse se comunicar com o VcXsrv.
+O comando Export é a pior forma de resolver esse problema no WSL, porém deu a mim a pista mais importante da resolução já que o $DISPLAY precisava de um IP para que o meu WSL pudesse se comunicar com o VcXsrv. Vamos dividir a resoluição em passos para facilitar.
 
 #### Passo 1: Identificar o IP do Host Windows  
 
-Para pegar o endereço IP do Windows para a comunicação com o WSL2 que usa a tecnologia de virtualização Hyper-v, dentro de um powerShell execute:
+Vamos pegar o endereço IP do Windows para a comunicação com o WSL2 que usa a tecnologia de virtualização Hyper-v. Dentro de um powerShell execute:
 
 ```PowerShell
 Get-NetIPAddress -InterfaceAlias "vEthernet (WSL (Hyper-V firewall))"
 ```
 
+vamos confirmar a saida:
+
+```PowerShell
+InterfaceAlias    : vEthernet (WSL (Hyper-V firewall))
+```
+
+e pegar o endereço IP:
+
+```PowerShell
+IPAddress         : 172.23.112.1
+```
+
 #### Passo 2: Configurar o $DISPLAY no Shell  
 
-Para a insistência já que o resolv.conf é modificado automaticamente, no seu ```.bashrc``` ou ```.zshrc``` adicione no final:
+Para a insistência já que o resolv.conf é modificado automaticamente após a incialização, no seu ```.bashrc``` ou ```.zshrc``` adicione no final:
 
 ```bash
-echo 'export DISPLAY=IP_ADDRESS:0.0' >> ~/.bashrc
+echo 'export DISPLAY=172.23.112.1:0.0' >> ~/.bashrc
 source ~/.bashrc  
 ```
 
 #### Passo 3: Testar o Ambiente Gráfico 
 
-Não se esqueça de estar com o servidor X ligado no Windows sempre que for usar o ambiente gráfico.
+Não se esqueça de estar com o servidor X ligado no Windows sempre que for usar o ambiente gráfico. execute o chromium ou seu aplicativo grafico:
 
 ```bash
-sudo pacman -S chromium  
 chromium  
 ```
 
 ![Imagem do servidor funcionando](https://i.ibb.co/5gpX7HLK/Resolved-xserver-error.png)
 
+E lá está... funcionando perfeitamente. Resolver um problema após horas de tentantiva e erro é muito aliviante, é como receber uma notícia boa.
+
+A sequir um extra, um problema que topei no meio do caminho, mas é mais falta de atenção mesmo, já que basta apenas marca a opção correta da configuração do servidor:
+
 ## Problemas Comuns e Soluções
 
-#### Erro: "Authorization required, but no authorization protocol specified"  
+#### Erro: "Authorization required, but no authorization protocol specified"
 - Cause: Controle de acesso do X Server ativo.  
 - Solução: Marque **Disable access control** no VcXsrv.

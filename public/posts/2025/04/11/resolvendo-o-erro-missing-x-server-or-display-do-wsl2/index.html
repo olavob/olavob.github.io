@@ -218,32 +218,37 @@
 <p>Para rodar um programa dentro do terminal é só instalá-lo usando o gerenciadores de pacotes <code>yay</code>(se instalado) ou o <code>pacman</code> e executá-lo, algo como <code>chromium</code>.</p>
 <p>Quando fui executar deu o erro, <code>Missing X server or $DISPLAY</code>, tentei dar o export do seguinte comando seguindo as instruções do Deepseek:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export DISPLAY<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>grep nameserver /etc/resolv.conf | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#66d9ef">)</span>:0.0
-</span></span></code></pre></div><p>Ou até mesmo executar o Chromium com as Flags:</p>
+</span></span></code></pre></div><p>Ou até mesmo executar o Chromium com algumas Flags:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chromium --no-sandbox --disable-dev-shm-usage --use-gl<span style="color:#f92672">=</span>angle --disable-gpu
 </span></span></code></pre></div><p>E mesmo assim o erro se repetia, me forçando a pensar mais a fundo.</p>
 <h2 id="resolução-do-erro">Resolução do Erro</h2>
 <p>Esse comando <code>export</code> pega o valor da variável nameserver dentro de <code>/etc/resolv.conf</code> e coloca como valor da nossa variável de ambiente
 $DISPLAY. Então, vamos começar a destrinchar para entendermos o erro bobo que não vemos.</p>
 <p>Primeiro vamos entender o arquivo do diretório <code>/etc/resolv.conf</code></p>
-<p>Dentro do seu navegador quando se acessa <a href="https://www.google.com">https://www.google.com</a> vai certamente abrir magicamente a página do mecanismo de pesquisa google. Porém, se falamos mais tecnicamente, porque não acessar o google com seu endereço IP direto algo como http://142.250.79.4:80? Já que todos os sites têm endereços IP que podem se comunicar via WebSockets com um cliente(navegador) ou com os próprios servidores internos para aí sim ter a resposta que já é esperada. Então, porque usar o DNS, a resposta é simples: é mais fácil e memorável, porém os benefícios de um DNS(Domain Name System) não acabam aí.</p>
+<p>Dentro do seu navegador quando se acessa <a href="https://www.google.com">https://www.google.com</a> vai certamente abrir magicamente a página do mecanismo de pesquisa google. Porém, se falamos mais tecnicamente, porque não acessar o google com seu endereço IP direto? algo como http://142.250.79.4:80 Já que todos os sites têm endereços IP que podem se comunicar via WebSockets com um cliente(navegador) ou com os próprios servidores internos para aí sim ter a resposta que já é esperada. Então, porque usar o DNS, a resposta é simples: é mais fácil e memorável, porém os benefícios de um DNS(Domain Name System) não acabam aí.</p>
 <p>Endereços IPs variam de acordo com o dispositivo e da região geográfica, já que depende do balanceador de carga do Google para selecionar o servidor. Por isso google.com é uma forma padrão que calibra automaticamente o IP da sua região ou do seu dispositivo no DNS.</p>
 <p>A função principal do <code>resolv.conf</code> é configurar parâmetros e listar IPs remotos de servidores DNS do sistema ou um serviço local que aponta para um intermediário.</p>
 <p>O WSL não possui um canal de rede própria já que é integrado com o Windows. então quando vemos o resolv.conf, o valor de nameserver é o endereço do gateway local do roteador que funciona como um proxy do DNS, que é o que o windows usa para encaminhar as consultas nos servidores DNS.</p>
-<p>Ou seja, precisaremos de um IP do seu host para colocar no $DISPLAY. Não o IP do proxy do fuc** roteador TP-LINK da banda larga sei lá das quantas que tem na sua cidade.</p>
+<p>Ou seja, precisaremos de um IP do seu host Hyper-v para colocar no $DISPLAY. Não o IP do proxy do fuc** roteador TP-LINK da banda larga sei lá das quantas que tem na sua cidade.</p>
 <p>Bem, esse é o ponto crítico, a parte fácil que não sabemos. Agora vamos colocar o servidor X para funcionar.</p>
-<p>O comando Export é a pior forma de resolver esse problema no WSL, porém deu a mim a pista mais importante da resolução já que o $DISPLAY precisava de um IP para que o meu WSL pudesse se comunicar com o VcXsrv.</p>
+<p>O comando Export é a pior forma de resolver esse problema no WSL, porém deu a mim a pista mais importante da resolução já que o $DISPLAY precisava de um IP para que o meu WSL pudesse se comunicar com o VcXsrv. Vamos dividir a resoluição em passos para facilitar.</p>
 <h4 id="passo-1-identificar-o-ip-do-host-windows">Passo 1: Identificar o IP do Host Windows</h4>
-<p>Para pegar o endereço IP do Windows para a comunicação com o WSL2 que usa a tecnologia de virtualização Hyper-v, dentro de um powerShell execute:</p>
+<p>Vamos pegar o endereço IP do Windows para a comunicação com o WSL2 que usa a tecnologia de virtualização Hyper-v. Dentro de um powerShell execute:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Get-NetIPAddress -InterfaceAlias <span style="color:#e6db74">&#34;vEthernet (WSL (Hyper-V firewall))&#34;</span>
+</span></span></code></pre></div><p>vamos confirmar a saida:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>InterfaceAlias    <span style="color:#960050;background-color:#1e0010">:</span> vEthernet (WSL (Hyper-V firewall))
+</span></span></code></pre></div><p>e pegar o endereço IP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>IPAddress         <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">172.23</span>.112.1
 </span></span></code></pre></div><h4 id="passo-2-configurar-o-display-no-shell">Passo 2: Configurar o $DISPLAY no Shell</h4>
-<p>Para a insistência já que o resolv.conf é modificado automaticamente, no seu <code>.bashrc</code> ou <code>.zshrc</code> adicione no final:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export DISPLAY=IP_ADDRESS:0.0&#39;</span> &gt;&gt; ~/.bashrc
+<p>Para a insistência já que o resolv.conf é modificado automaticamente após a incialização, no seu <code>.bashrc</code> ou <code>.zshrc</code> adicione no final:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export DISPLAY=172.23.112.1:0.0&#39;</span> &gt;&gt; ~/.bashrc
 </span></span><span style="display:flex;"><span>source ~/.bashrc  
 </span></span></code></pre></div><h4 id="passo-3-testar-o-ambiente-gráfico">Passo 3: Testar o Ambiente Gráfico</h4>
-<p>Não se esqueça de estar com o servidor X ligado no Windows sempre que for usar o ambiente gráfico.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S chromium  
-</span></span><span style="display:flex;"><span>chromium  
+<p>Não se esqueça de estar com o servidor X ligado no Windows sempre que for usar o ambiente gráfico. execute o chromium ou seu aplicativo grafico:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chromium  
 </span></span></code></pre></div><p><img src="https://i.ibb.co/5gpX7HLK/Resolved-xserver-error.png" alt="Imagem do servidor funcionando"></p>
+<p>E lá está&hellip; funcionando perfeitamente. Resolver um problema após horas de tentantiva e erro é muito aliviante, é como receber uma notícia boa.</p>
+<p>A sequir um extra, um problema que topei no meio do caminho, mas é mais falta de atenção mesmo, já que basta apenas marca a opção correta da configuração do servidor:</p>
 <h2 id="problemas-comuns-e-soluções">Problemas Comuns e Soluções</h2>
 <h4 id="erro-authorization-required-but-no-authorization-protocol-specified">Erro: &ldquo;Authorization required, but no authorization protocol specified&rdquo;</h4>
 <ul>
