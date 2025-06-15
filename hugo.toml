@@ -44,23 +44,17 @@ theme = "gokarna"
 [params]
   accentColor = "#C0C0C0"
 
-  avatarURL = "https://avatars.githubusercontent.com/u/137653930?s=400&u=91a5a2db87e4ec6dfd60ce15574210de410e828f&v=4"
-
-  avatarAltText = "olavodotpy"
-
-  description = "“O universo pode não ser infinito, mas as possibilidades nele, essa é outra história” —Okabe Rintarou"
-
   footer = "Olavo B. A. Neto"
 
-  metaKeywords = ["blog", "gokarna", "hugo", "Programador", "olavodotpy"]
+  metaKeywords = ["blog", "gokarna", "hugo", "Programador", "olavodotpy", "Olavo Bilac", "Ações", "bolsa de valores", "B3", "Developer"]
 
-  numberPostsOnHomePage = 2
+  numberPostsOnHomePage = 10
 
-  showPostsOnHomePage = "popular"
+  showPostsOnHomePage = "recent"
 
   togglePreviousAndNextButtons = false
 
   customFooterHTML = '''
     <div id="commento"></div>
-    <script type="text/javascript" src="/js/disqus/coments.js" ></script>
+    <script type="text/javascript" src="/disqus/coments.js" ></script>
 '''
