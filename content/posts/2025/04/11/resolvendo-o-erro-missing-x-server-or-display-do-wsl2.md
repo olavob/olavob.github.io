@@ -4,6 +4,8 @@ draft: false
 title: Resolvendo O Erro **Missing X Server or Display** Do WSL2.
 type: "post"
 tags: ['linux', 'windows', 'wsl', 'xserver', 'debugging']
+layout: default
+comments: true
 ---
 
 ## Contexto do Problema

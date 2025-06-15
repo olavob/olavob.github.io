@@ -37,6 +37,10 @@ theme = "gokarna"
     pre = "<span data-feather='github'></span>"
     post = ""
 
+[services]
+  [services.disqus]
+    shortname = 'olavodotpys-blog'
+
 [params]
   accentColor = "#C0C0C0"
 
@@ -55,3 +59,8 @@ theme = "gokarna"
   showPostsOnHomePage = "popular"
 
   togglePreviousAndNextButtons = false
+
+  customFooterHTML = '''
+    <div id="commento"></div>
+    <script type="text/javascript" src="/js/disqus/coments.js" ></script>
+'''

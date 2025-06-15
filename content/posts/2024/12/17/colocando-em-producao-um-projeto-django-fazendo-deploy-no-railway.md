@@ -4,6 +4,8 @@ draft: false
 title: "**Deployando** um projeto Django!! Colocando em **produção no Railway.**"
 type: "post"
 tags: ['django', 'produção', 'railway', 'gunicorn', 'debugging']
+layout: default
+comments: true
 ---
 
 ### Introdução
