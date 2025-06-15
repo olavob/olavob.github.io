@@ -145,19 +145,14 @@ Subi o meu gunicorn para produção com 2 worker. Porém por algum motivo o núm
 gunicorn django_production.wsgi:application --bind 0.0.0.0:8080 --timeout 120 --workers 2
 ```
 
-
 Quando se aumenta recursos como CPU e memória isso se chama Escalabilidade Vertical, aumentando o número de worker para ter mais poder de processamento. Com isso resolvemos o problema do erro interno, só restando um, o problema de limite de requisição da API.
 
-
 Pymemcache é um sistema de cache, uma forma de evitar requisições e número de operações do código. O melhor exemplo que eu poderia dar é:
-
 
 Eu tenho um sistema que precisa pegar uma lista de produtos do meu ecommerce, para cada 1 mil usuários eu tenho em média 5 requi/s, e em cada requisição, acontece o seguinte: O meu código pega os itens do banco de dados, a partir de um loop while, e coloca todo o conteúdo dentro do meu contexto de variáveis para ser usado na montagem do template.
 
 Agora com o uso do Cache, na primeira requisição o meu sistema verifica se tem dados existentes dentro banco do cache, se não tiver eu faço o fluxo normal pegando a lista de itens só que agora no final da requisição eu guardo tudo dentro do cache, na próxima requisição eu vou estar com o contexto armazenado no cache evitando todo o fluxo do loop while e complexidade O(N) de itens para percorrer, só precisando agora de 1 processo de busca, poupando uso de CPU e memória.
 
-
 Para implementar um sistema de cache eu precisei criar um container Docker só que pelo painel visual do Railway ficou super fácil e eu não precisei escrever 1 linha de código, e é assim que deveria ser, não é necessário um desenvolvedor escrever código diretamente dentro da linha da produção, tem que ser tudo automático para evitar conflitos. Quando se aumenta o número de containers e servidores isso se chama escalabilidade horizontal. 
 
->Escrito por Olavo Bilac 
 ---------------------------------------------------------------------------------------
