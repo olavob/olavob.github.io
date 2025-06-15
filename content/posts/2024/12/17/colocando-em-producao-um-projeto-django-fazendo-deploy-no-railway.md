@@ -159,4 +159,5 @@ Agora com o uso do Cache, na primeira requisição o meu sistema verifica se tem
 
 Para implementar um sistema de cache eu precisei criar um container Docker só que pelo painel visual do Railway ficou super fácil e eu não precisei escrever 1 linha de código, e é assim que deveria ser, não é necessário um desenvolvedor escrever código diretamente dentro da linha da produção, tem que ser tudo automático para evitar conflitos. Quando se aumenta o número de containers e servidores isso se chama escalabilidade horizontal. 
 
+>Escrito por Olavo Bilac 
 ---------------------------------------------------------------------------------------

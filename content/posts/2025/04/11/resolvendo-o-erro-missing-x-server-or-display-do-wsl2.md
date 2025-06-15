@@ -142,4 +142,5 @@ A sequir um extra, um problema que topei no meio do caminho, mas é mais falta d
 - Cause: Controle de acesso do X Server ativo.  
 - Solução: Marque **Disable access control** no VcXsrv.
 
+>Escrito por Olavo Bilac 
 ---------------------------------------------------------------------------------------
