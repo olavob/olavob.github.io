@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/debugging/</loc>
+    <loc>https://olavodotpy.github.io/tags/debugging/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://olavodotpy.github.io/tags/linux/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://olavodotpy.github.io/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://olavodotpy.github.io/posts/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/</loc>
+    <loc>https://olavodotpy.github.io/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://olavodotpy.github.io/tags/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows/</loc>
+    <loc>https://olavodotpy.github.io/tags/windows/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wsl/</loc>
+    <loc>https://olavodotpy.github.io/tags/wsl/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/xserver/</loc>
+    <loc>https://olavodotpy.github.io/tags/xserver/</loc>
     <lastmod>2025-06-12T01:11:42-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/</loc>
+    <loc>https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/</loc>
     <lastmod>2024-12-17T22:52:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/django/</loc>
+    <loc>https://olavodotpy.github.io/tags/django/</loc>
     <lastmod>2024-12-17T22:52:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gunicorn/</loc>
+    <loc>https://olavodotpy.github.io/tags/gunicorn/</loc>
     <lastmod>2024-12-17T22:52:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/produ%C3%A7%C3%A3o/</loc>
+    <loc>https://olavodotpy.github.io/tags/produ%C3%A7%C3%A3o/</loc>
     <lastmod>2024-12-17T22:52:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/railway/</loc>
+    <loc>https://olavodotpy.github.io/tags/railway/</loc>
     <lastmod>2024-12-17T22:52:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://olavodotpy.github.io/categories/</loc>
   </url>
 </urlset>

@@ -17,14 +17,10 @@ theme = "gokarna"
     # listed last in the menu (rightmost)
     weight = 1
 
-    pre = "<img class='svg-inject' src='/book.svg' />"
-
   [[menu.main]]
     name = "Tags"
     url = "/tags/"
     weight = 2
-
-     pre = "<img class='svg-inject' src='/tag.svg' />"
 
   [[menu.main]]
     identifier = "github"
