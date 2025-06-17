@@ -1,3 +1,3 @@
 [submodule "themes/gokarna"]
 	path = themes/gokarna
-	url = https://github.com/gokarna-theme/gokarna-hugo.git
+	url = https://github.com/gokarna-theme/gokarna-hugo/tree/d3369fcb9bc99fd8330841e8b227a204d806845f#
