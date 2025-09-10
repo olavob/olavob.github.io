@@ -12,7 +12,7 @@ Você sabe a maneira mais segura de fazer com que seu dinheiro renda? Aposto que
 
 Conhece a melhor forma de fazer o seu dinheiro “trabalhar” pra você? essa é fácil né? —"é só virar empresário!!" Bem não está errado, mas... Será que essa é uma opção para você? Você tem um produto? Um capital inicial para entrar com seu negócio e contratar funcionários? Logística? marketing? Clientes suficientes para ter um retorno mínimo do seu investimento no próximo trimestre? Se respondeu tudo com um "Tenho" ou "Sim", o que você está esperando? Comece seu negócio, agora se tem um negocio e está querendo investir seu dinheiro, perfeito. Para quem ficou sem palavras, eu estava certo! Mas calma, nem tudo está perdido!
 
-Quando falo em investimentos, falo mais especificamente das Ações, para mim, são o melhor ativo e o mais "**SEGURO**". 
+Quando falo em investimentos, falo mais especificamente das Ações, para mim, são o melhor ativo e o mais "**seguro**". 
  
 Antes que comece a pensar em algumas bobagens como: “Comprar ações é a mesma coisa que apostar”, “É arriscado demais”, “Existem alternativas mais seguras”, “Não sou rico”, “É desnecessário” ou até pior “Não sou inteligente o suficiente”. Todos esses tipos de pensamentos são absurdamente exagerados e ignorantes.
  
@@ -41,6 +41,7 @@ A B3 surgiu em 2017 quando ocorreu a fusão da bolsa BM&F Bovespa com a Cetip, c
 No cenário internacional também existem várias bolsas de valores, como nos Estados Unidos com a NYSE(New York Stock Exchange) a maior bolsa do mundo negociando apenas cotas de empresas do setor tradicional dos EUA; e Nasdaq(National Association of Securities Dealers Automated Quotations) para empresas de tecnologia.
 
 Para ter uma noção, a B3 contém mais de 439 ativos (em 18 de jul. de 2024) e a NYSE e Nasdaq juntas com mais de 4.500 empresas, superando em quase 13x a bolsa de valores Brasileira.
+
 ## O básico de ações
 
 A ação é um termo que nomeia os pedaços das empresas que se foram “particionados". Vamos lá, irei explicar, vamos supor que eu vou criar uma padaria, precisamos de capital para a construção da firma em si como tijolo e cimento e além disso, equipamentos como o forno, assadeira e bancadas. Esse capital se chama Capital Social Inicial, que é o primeiro investimento que o dono ou os sócios da empresa fazem para começar as operações, e esse capital se transforma em patrimônio líquido. 
