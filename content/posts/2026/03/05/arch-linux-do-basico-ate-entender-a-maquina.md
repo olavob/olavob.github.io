@@ -1,9 +1,9 @@
 ---
 date: 2026-03-05T16:08:42-03:00
 draft: false
-title: Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)
+title: "Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)"
 type: "post"
-tags: ['archlinux', 'linux', 'aprendizado', 'rant', 'instalação', 'tutorial', 'computer-science', 'sistemas-operacionais', 'gnome', 'wayland', 'devops', 'guia']
+tags: ['archlinux', 'linux', 'aprendizado', 'rant', 'instalação', 'tutorial', 'computer-science', 'sistemas-operacionais', 'devops', 'guia']
 layout: default
 comments: true
 ---
