@@ -307,7 +307,7 @@ Essa é a camada um pouco superior ou seja, mais para fora do Sistema Linux, col
 
 o GDM, Wayland e Gnome que estão ainda mais acima, seria a camada "mais alta" deles, que representa o ambiente gráfico, como a área e trabalho que é uma interface GUI que forra a visão do usuário para as outras camadas mais "abaixo" do sistema, faremos a instalação deles no final do post, por isso vamos ignora-los por enquanto.
 
-Ambos esses processos ocorrem na primeira etapa do sistema, na inicialização. O UEFI é o substituto da BIOS ou seja nela estamos inicializando os Drivers do Computador, o Secure Boot e o suporte a disco tanto o mais recente GPT quanto o mais antigo MBR, que irei detalhar eles mais tarde. 
+Ambos esses processos ocorrem na primeira etapa do sistema, na inicialização. O UEFI é o substituto da BIOS ou seja, nela estamos inicializando os Drivers do Computador, o Secure Boot e o suporte a disco tanto o mais recente GPT quanto o mais antigo MBR, que irei detalhar eles mais tarde. 
 
 Um [GRUB](https://wiki.archlinux.org/title/GRUB_(Portugu%C3%AAs)) é um Gerenciado de [Boot](https://linux.cosmosonline.com.br/glossario/o-que-e-boot-inicializacao-linux/) que carrega a imagem da kernel o [vmlinux](https://en.wikipedia.org/wiki/Vmlinux) e inicializa o [Systemd](https://en.wikipedia.org/wiki/Systemd), que é um sistema de inicialização que carrega todos os [daemons](https://en.wikipedia.org/wiki/Daemon_(computing)) presentes. É a partir dele que os processos iniciais do Boot serão carregados. 
 
@@ -378,7 +378,7 @@ pacman -S man
 man fdisk
 ```
 
-``fdisk`` é um comando interativo, ou seja o comando pelo terminal vai te dando opções e o usuário seleciona. Para facilitar a partição e formatação, vou colocar aqui o guia das opções para formatar essas três partições com esses layouts, mas deixando claro que qualquer erro é sua responsabilidade, leia atentamente:
+``fdisk`` é um comando interativo, ou seja, o comando pelo terminal vai te dando opções e o usuário seleciona. Para facilitar a partição e formatação, vou colocar aqui o guia das opções para formatar essas três partições com esses layouts, mas deixando claro que qualquer erro é sua responsabilidade, leia atentamente:
 
 ```
 EFI = 512M
@@ -614,7 +614,7 @@ Não é recomendado por questões de [Segurança](https://wiki.archlinux.org/tit
 # 1. Crie o usuário (troque "seunome" pelo nome que quiser) 
 useradd -m -G wheel seunome
 
-# 2. Defina uma senha forte pro usuário 
+# 2. Defina uma senha forte para o usuário 
 passwd seunome
 ```
 
