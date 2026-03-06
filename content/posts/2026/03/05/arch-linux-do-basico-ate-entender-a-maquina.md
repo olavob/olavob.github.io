@@ -654,7 +654,7 @@ Finalmente, esse post foi bem longo, mas ainda não chegamos no final ainda, vam
 
 Ambiente gráfico é outro assunto que renderia um post inteiro mas não aguento mais digitar... Então falarei apenas do básico.
 
-Como interface gráfica, que seria a o conjunto área de trabalho, painel de controle e barra de notificação usaremos o [Gnome Shell](https://pt.wikipedia.org/wiki/GNOME_Shell), porém existem outros como KDE Plasma e XFCE.
+Como interface gráfica usaremos o [Gnome Shell](https://pt.wikipedia.org/wiki/GNOME_Shell), que vai ser o conjunto área de trabalho, painel de controle e barra de notificação. Existem outros como KDE Plasma e XFCE.
 
 E como servidor de display, que será o [Wayland](https://pt.wikipedia.org/wiki/Wayland_(protocolo_de_servidor_gr%C3%A1fico)), uma alternativa seria o i3 como WM ou Xorg. Ele carregará os drivers de exibição que estarão no meu pacote `virtualbox-guest-utils` e configurará variáveis de ambientes como o $DISPLAY que serve para indexar a quantidade de monitor e configurar desktops remotos via endereço IP. Além disso ele vai compor o Gnome Shell para nós. 
 

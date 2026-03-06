@@ -1,7 +1,7 @@
 ---
 date: 2025-06-12T01:11:42-03:00
 draft: false
-title: Resolvendo O Erro **Missing X Server or Display** Do WSL2.
+title: 'Resolvendo o Erro: "Missing X Server or Display" Do WSL2'
 type: "post"
 tags: ['linux', 'windows', 'wsl', 'xserver', 'debugging']
 layout: default
