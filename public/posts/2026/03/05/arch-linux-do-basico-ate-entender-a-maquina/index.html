@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #C0C0C0;
+            --font-size: 1.1rem;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)</title>
+    <meta name="description" content="Antes de começar o Post irei fazer dois &ldquo;Rants&rdquo; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que …">
+    <meta name="keywords" content='blog, gokarna, hugo, programador, olavopx, Olavo Bilac, ações, bolsa de valores, B3, developer, ArchLinux, linux, archlinux, aprendizado, rant, instalação, tutorial, computer-science, sistemas-operacionais, devops, guia'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)">
+    <meta property="og:description" content="Antes de começar o Post irei fazer dois &ldquo;Rants&rdquo; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que …">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
+    <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)">
+    <meta name="twitter:description" content="Antes de começar o Post irei fazer dois &ldquo;Rants&rdquo; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que …">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.7136b4abac7b277aba8bc933917f4602d39a5c44f5590be687244bc86ef4f162.js" integrity="sha256-cTa0q6x7J3q6i8kzkX9GAtOaXET1WQvmhyRLyG708WI="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Olavo Bilac&#39;s Blog</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/" aria-label="" > Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/olavopx" aria-label="github" ><span data-feather='github'></span> GitHub </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a value="Refresh Page" onClick="window.location.reload() "aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/" > Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/olavopx" ><span data-feather='github'></span> GitHub </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a value="Refresh Page" onClick="window.location.reload()" role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle"></small>
+	
+
+	
+          <p class="post-date">
+              
+
+              março 5, 2026
+
+              
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/archlinux">archlinux</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/linux">linux</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/aprendizado">aprendizado</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/rant">rant</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/instala%C3%A7%C3%A3o">instalação</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/tutorial">tutorial</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/computer-science">computer-science</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/sistemas-operacionais">sistemas-operacionais</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/devops">devops</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/guia">guia</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>Antes de começar o Post irei fazer dois <a href="https://www.merriam-webster.com/dictionary/rant">&ldquo;Rants&rdquo;</a> que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que procuram aprender Linux, onde nesse caso obviamente vou dividir e generalizar os iniciantes em geral para simplificar a explicação do argumento, mas deixando claro que não é possível logicamente falar de todo o tipo de pessoas que existe no planeta.</p>
+<p>Cada indivíduo pode ter sua capacidade e dificuldade físicas e psicológicas para realizar uma determinada tarefa.</p>
+<h1 id="rant-todo-iniciante-tem-a-capacidade-de-aprender-algo-relativamente-complexo">Rant: Todo Iniciante tem a Capacidade de Aprender algo Relativamente Complexo?</h1>
+<p>Para um iniciante em <a href="https://pt.wikipedia.org/wiki/Linux">Linux</a> ou qualquer outra atividade que exija prática e raciocínio, costumo pensar que existem dois grupos, o iniciante que sabe o básico de um assunto, seja ele o básico a trivial em programação ou qualquer outra atividade, e o iniciante simplesmente curioso, que acabou de sair de um sistema operacional estático como o Windows ou qualquer outro lugar confortável e seguro onde passou a vida toda e quis aprender algo que achou interessante, seja, nesse caso, aprendendo um novo sistema operacional.</p>
+<p>Existe uma diferença drástica entre os dois grupos.</p>
+<p>O primeiro tem a motivação de seguir uma carreira de verdade e se esse cara pelo menos &ldquo;debugou&rdquo; alguma função que ele achou particularmente complexa, tendo a lógica de como um computador funciona de verdade, linha por linha, instrução por instrução, byte a byte, esse tipo de iniciante está &ldquo;anos luz&rdquo; à frente dos outros.</p>
+<p>Ou seja, para o iniciante que teve uma experiência envolvendo essa atividade, ele vai estar naturalmente à frente, e isso é um fato.</p>
+<p>Essa diferença é fundamental e não vale apenas a computação em especifico, mas para qualquer tarefa que exija raciocínio e prática.</p>
+<p>É o que faz um grupo desistir e o outro não, mas claro, toda regra tem uma exceção, e o fator que equilibra os dois grupos é a Curiosidade.</p>
+<p>A simples curiosidade de fazer uma pergunta pra si mesmo ou para o outro é uma <a href="https://tilt.colostate.edu/the-socratic-method/">prática de aprendizado eficaz</a>, essa pessoa nem precisa ter a capacidade de resolver sua dúvida ou crise, mas ela apenas dando opinião, fortalece a sua própria visão analítica dos fatos.</p>
+<p>A curiosidade de procurar novas informações e de se perguntar o que está errando é o que define, quem desiste fácil mesmo tendo todo o potencial do mundo, de quem fica, aprende e persiste mesmo com toda a dor de aprender.</p>
+<p>E é isso que significa aprender uma <a href="https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_Linux">distribuição</a> como o Arch Linux, é preciso fuçar a wiki. Ser curioso.</p>
+<h1 id="rant-o-programador-realmente-precisa-aprender-linux">Rant: O Programador Realmente precisa aprender Linux?</h1>
+<p>Essa pergunta é fácil de responder, um motorista precisa aprender mecânica? a resposta é não. Mas isso tornaria ele melhor no que faz? aí a resposta muda completamente&hellip;</p>
+<p>No mesmo sentido em que o motorista possa ser o melhor piloto do mundo, se o carro quebrar quem ele chama? um mecânico. Agora o programador pode ser o melhor especialista em linguagem de programação X do mundo, se o sistema remoto da empresa der pau, quem ele chama? a mãe? o chefe, que vai descobrir sua incompetência? o time de produto e marketing que não faz a mínima ideia do que ele está falando? ou o outro programador que vai saber resolver esse problema, e logo vai ganhar mais destaque e aumento? Esse cenário pode parecer fictício mas pode ocorrer em empresas pequenas, que apenas contém 1 programador ou um time de 3 ou 4 no máximo, essas empresas são a base da escada, é o primeiro emprego de todo programador iniciante, Em empresas grandes existem profissionais especializados nisso, chamados de DevOps, mas essa não é a realidade de muitos ambientes de trabalho.</p>
+<p>O verdadeiro prejuízo está na capacidade de resolver problemas e de criar soluções próprias.</p>
+<p>Quando digo &ldquo;especialista em linguagem X&rdquo; como Python, Javascript, C++ ou até Java, não quero dizer que ele seja bom especificamente por isso, até uma criança pode digitar código, uma IA consegue, sua tia consegue, uma Linguagem de Programação é útil mas é apenas uma ferramenta, é um jeito de enviar instruções a um computador e ponto.</p>
+<p>Um programador que fica apenas digitando código de <a href="https://www.dio.me/articles/linguagens-de-programacao-de-alto-e-baixo-nivel">alto nível</a>, ficando apenas no Windows e não sabe matemática, está limitando a sua carreira. Por que se limitar tão cedo estando no início dela?</p>
+<p>Lógica de programação é necessária mas não chega nem a ser o básico do básico, é apenas o essencial, é como aprender a ler sem saber escrever. Por isso não incentivo o uso da PseudoLinguagem como o <a href="https://pt.wikipedia.org/wiki/Portugol">Portugol</a> aprender lógica é trivial, e não faz sentido dar a um iniciante uma ferramenta que é apenas para isso, e que pode acostumá-lo com vícios como os de <a href="https://pt.wikipedia.org/wiki/Boas_pr%C3%A1ticas_de_programa%C3%A7%C3%A3o">Más Práticas de Programação</a>, já que não é uma linguagem de verdade, pode ser considerada uma perda de tempo completa.</p>
+<p>Salvo engano apenas as pessoas que realmente têm uma Dificuldade em raciocínio e lógica, para isso o Portugol pode ser um ótimo ponto de partida.</p>
+<p>O simples fato de estudar Linux e  <a href="https://minutodaseguranca.blog.br/importancia-da-linguem-de-programacao-de-baixo-nivel/">Linguagens de baixo nível</a>, é para ajudar no desenvolvimento da capacidade cognitiva e na melhoria expressiva da qualidade do código feito. Ajudar o desenvolvedor a ter um outro campo de visão a pensar fora da caixa. Um programador que fica apenas no superficial não tem segurança e otimização, não tem noção de que o Python ou o Javascript dele esteja consumindo 150% a mais do que deveria de memória e performance, coisas que em <a href="https://aerospike.com/blog/vertical-vs-horizontal-scaling/">Escalabilidade Vertical</a> de um <a href="https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">Deploy</a> custa dinheiro e pode dar prejuízo em dívidas.</p>
+<p>Em um Linux ou sistemas mais complexos você é obrigado a pensar em uma coisa muito chata chamada de Escalabilidade, recurso não é infinito é finito e custa $.</p>
+<p>Um exemplo: vamos criar um arquivo de qualquer linguagem mesmo, mas primeiro vamos para a pasta temporária do Linux para não poluir os diretórios: <code>cd /tmp</code> onde o comando <code>cd</code> significa: Change Directory.</p>
+<p>Uma vez lá dentro vamos &ldquo;tocar&rdquo; ou criar um arquivo: <code>touch teste.rb</code> e vamos abrir e uma IDE ou um editor via CLI que significa interface em linha de comando, aqui vou utilizar o VIM, <code>vim teste.rb</code>.</p>
+<p>vou agora escrever uma função trivial em Ruby de &ldquo;hello world&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">teste</span>
+</span></span><span style="display:flex;"><span>    puts <span style="color:#e6db74">&#34;hello world&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>teste
+</span></span></code></pre></div><p>Para uma pessoa que apenas ficou no superficial isso basta, é realmente algo super simples, porém sua visão sobre esse código continua limitada por mais simples que ele seja.</p>
+<p>Agora salvamos e saímos com <code>:wq!</code> uma vez fora do editor e dentro do nosso diretório, executaremos <code>xxd -g1 arquivo</code> com a saída disso, temos algo mais complexo.</p>
+<p><img src="https://i.ibb.co/QjY4H60b/Captura-de-tela-2026-03-03-022733.png" alt=""></p>
+<p>Uma mudança radical no campo de visão do programador, agora é o mesmo código mas representado em <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal">Hexadecimal</a>, o mais próximo de como seria em uma <a href="https://pt.stackoverflow.com/questions/92755/de-onde-vem-a-express%C3%A3o-escovar-bits-e-qual-o-equivalente-em-ingl%C3%AAs">escovação de bit</a>. Na esquerda contendo o Offset em Bytes, ou seja a posição em Bytes do conteúdo do arquivo, de 0&hellip;0 até 0&hellip;10 é 16 Bytes, em exa 16 = 10.</p>
+<p>Na direita as letras são representadas também em Hexadecimal, se observar bem, veremos o  conteúdo original do arquivo: 65 em exa é a letra &ldquo;e&rdquo; no meu código, tendo cada caractere 1 Byte.</p>
+<p>Agora executando <code>xxd -b arquivo</code> veremos tudo em Binário.</p>
+<p><img src="https://i.ibb.co/B8k0PdW/Captura-de-tela-2026-03-03-025556.png" alt=""></p>
+<p>Tendo cada caractere representado por um Byte, cada Byte contendo 8 Bits.</p>
+<p>Essa série de comandos que exemplifiquei é uma forma de enxergar o código bem simples mas com outros olhos, não em uma camada tão superficial como apenas a sintaxe funcional e o resto &ldquo;mágica&rdquo;, mas sim que a sintaxe vira caracteres, encode, bytes e bits. porém não se empolgue, isso é apenas a Pré-introdução de Programação de baixo nível. Para saber mais recomendo assistir esse <a href="https://www.youtube.com/watch?v=Gp2m8ZuXoPg">vídeo do Fabio Akita</a>.</p>
+<h1 id="introdução-ao-arch-linux">Introdução ao Arch Linux</h1>
+<p>Depois desse longo RANT, vimos que um iniciante pode ser capaz de aprender Arch, apenas tendo a curiosidade de pesquisar e de perguntar para si mesmo o porquê de algo acontecer.</p>
+<p>Logo após expliquei a importância para o programador conhecer sua própria máquina, o programador tem que dominar a máquina, não a máquina dominar o programador.</p>
+<p>E finalizando a reflexão, dei um exemplo de como o campo de visão do desenvolvedor pode aumentar apenas saindo da sua zona de conforto, o alto nível é fácil e prático, nenhum programador precisa de fato sair dele no seu dia a dia de trabalho, porém isso limita tanto sua carreira e potencial de ganho quanto sua habilidade de obter a melhor solução com mais eficiência e economia.</p>
+<p>Agora vamos começar o post de verdade.</p>
+<p>Nesse post vou mostrar passo a passo da instalação do <a href="https://archlinux.org/">Arch Linux</a>, levando em consideração que vou seguir o tutorial do <a href="https://wiki.archlinux.org/title/Main_page">ArchWIKI</a> e explicarei algumas armadilhas que um iniciante iria facilmente cair.</p>
+<p>Para deixar bem claro irei fazer a instalação em uma <a href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual">Máquina Virtual</a> no meu caso usarei o <a href="https://www.virtualbox.org/">Virtual Box</a>, então irei pular alguns passos da instalação básicas, já que não preciso me preocupar com alguns drivers como as de rede, porque o Virtual Box transfere a rede via Ethernet do meu host no caso o meu Windows 11 para o ambiente isolado.</p>
+<h2 id="pré-instalação---instalando-a-iso-executando-os-primeiros-comandos">Pré-Instalação - Instalando a ISO, Executando os Primeiros Comandos</h2>
+<p><img src="https://www.controle.net/novo/assets/img/faq/imagem-iso-faq-o-que-e-uma-imagem-iso-controlenet.webp" alt=""></p>
+<p>Instalar a <a href="https://archlinux.org/download/">ISO</a> é o primeiro passo para começar no Arch, mas o que é ISO? um arquivo <code>.iso</code> é uma cópia perfeita do conteúdo presente nas mídias de instalações como CD e DVD. Ou seja, é um arquivo de imagem de instalação do OS(Sistema Operacional) no caso o Arch Linux.</p>
+<p>Na página de Download recomendo você instalar por <a href="https://www.qbittorrent.org/download">qBitTorrent</a> pelo link do Magnet. Uma vez instalado é só você colocar na sua máquina virtual ou <a href="https://rufus.ie/pt_BR/">queimar um Pendrive</a> para fazer o processo diretamente na sua máquina local. Porém recomendo que se o Linux for uma novidade, fique por enquanto na máquina virtual, seja você qualquer um dos dois grupos que citei antes, a chance de fazer algo errado e estragar o seu sistema é bem alta, até mesmo sendo programador já experiente.</p>
+<p>Todo iniciante em Linux vai quebrar o sistema. Então recomendo começar em um ambiente separado para teste e aprendizado.</p>
+<h3 id="gpt-vs-mbr">GPT vs MBR</h3>
+<p>Para quem vai queimar Pendrive, é importante saber a diferença entre esses dois e quando escolhe-los'</p>
+<p>Para saber mais sobre <a href="https://wiki.archlinux.org/title/Partitioning_(Portugu%C3%AAs)#Tabela_de_parti%C3%A7%C3%A3o">Tabela de Partição</a>, pode ler o guia, porém saibam que existe apenas essas três formas, o MBR, GPT e o disco sem particionar.</p>
+<p>MBR é bem antigo e quase nunca usado por distros novas, e você apenas vai utiliza-la em placa-mãe que usam BIOS, fora isso use GPT.</p>
+<p>Use GPT se você estiver usando UEFI, não use MBR.</p>
+<p>Para saber melhor qual usar, <a href="https://wiki.archlinux.org/title/Partitioning_(Portugu%C3%AAs)#Tabela_de_Parti%C3%A7%C3%A3o_GUID">consulte isso</a></p>
+<p><a href="https://www.lenovo.com/br/pt/glossary/uefi/">UEFI</a> que para quem não sabe é o novo firmware moderno substituto da clássica <a href="https://pt.wikipedia.org/wiki/BIOS">BIOS</a>(Sistema de Entrada e Saída Básico) que carrega o kernel e os drivers. A escolha dessas tabelas é essencial e pode influenciar na sua instalação.</p>
+<p>Para saber se seu <a href="https://www.youtube.com/watch?v=vjLdwIbv4Pk">disco está em GPT ou MBR</a></p>
+<p>Assim que configurar a Máquina virtual e começar o processo de inicialização da ISO, vai aparecer a seguinte tela</p>
+<p><img src="https://i.ibb.co/3mQbMWD1/Captura-de-tela-2026-03-03-222050.png" alt=""></p>
+<p>Selecionaremos a primeira opção pois estamos usando uma imagem ISO e não uma imagem NETBOOT.</p>
+<p>Na primeira opção temos a palavra: x86_64 pois essa é a arquitetura do meu processador, que pode variar dependendo do seu hardware, se o seu processador for de 32 Bits que seria o i386, você deverá instalar uma ISO própria para ela na página de download.</p>
+<p><img src="https://i.ibb.co/ZzPRpdyY/Captura-de-tela-2026-03-03-203923.png" alt=""></p>
+<p>Agora que selecionamos a primeira opção essa é a nossa próxima tela, e leia atentamente, estamos logados no usuário <code>root</code> chamado de <code>archiso</code> e seguindo temos os comandos para conexão de Wi-Fi no <a href="https://wiki.archlinux.org/title/Iwd_(Portugu%C3%AAs)#iwctl">terminal <code>iwctl</code></a> e também para Modem, e no final a mensagem pede para se conectar a internet para o guia online de instalação.</p>
+<p>Muito bem, é aqui que muito iniciante simplesmente PARA.</p>
+<p>Porque é simplesmente um sistema Arch Linux em um usuário root que está com um ambiente relativamente &ldquo;pronto&rdquo;. E para muitos é isso, mas é aqui que começa a instalação real do OS.</p>
+<p>Agora podemos verificar o modo de inicialização com o comando:</p>
+<pre tabindex="0"><code>cat /sys/firmware/efi/fw_platform_size
+</code></pre><p>Esse comando vai especificar se iniciamos com a arquitetura de UEFI de 64 ou 32 Bits, se retornar <code>Arquivo/Ficheiro ou diretório inexistente</code> quer dizer que o sistema foi iniciado no modo BIOS.</p>
+<p>Antes de prosseguirmos para o próximo tópico, recomendo os seguintes comando para fazer nesse inicio de instalação:</p>
+<p>Esse comando vai poupar seus olhos, ele vai acessar <code>/usr/share/kbd/consolefonts/</code> e vai trocar e aumentar a fonte do console:</p>
+<pre tabindex="0"><code>setfont ter-132b
+</code></pre><p>Esse comando vai mudar o layout do teclado para o padrão Brasileiro:</p>
+<pre tabindex="0"><code>loadkeys br-abnt2
+</code></pre><p>Esse comando é um pouco mais avançado, mas vai definir o idioma e o padrão de <a href="https://pt.wikipedia.org/wiki/UTF-8">codificação UTF-8</a>, vai precisar que você <a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">descomente</a> <code>pt_BR.UTF-8 UTF-8</code> em <code>/etc/locale.gen</code>.</p>
+<pre tabindex="0"><code># Abra o arquivo .gen com VIM ou nano e remova o &#34;#&#34; no começo da linha &#34;pt_BR.UTF-8 UTF-8&#34;
+vim /etc/locale.gen
+# ou
+nano /etc/locale.gen
+</code></pre><p>E gere-os com:</p>
+<pre tabindex="0"><code>locale-gen
+export LANG=pt_BR.UTF-8
+</code></pre><p>Esse conjunto de comandos estão no <a href="https://wiki.archlinux.org/title/Installation_guide_(Portugu%C3%AAs)#Inicializar_o_ambiente_live">Guia de instalação</a>. e serve para configurar o ambiente live, não sabe o que é esse ambiente? vamos falar dele agora.</p>
+<h2 id="comandos-básicos-de-um-linux">Comandos Básicos de um Linux</h2>
+<p>Como uma forma de guiar quem realmente nunca tocou em um terminal, aqui estão os 30 comandos mais usados e descritos um por um.</p>
+<pre tabindex="0"><code>ls -la
+# Lista arquivos e diretórios no formato longo incluindo ocultos, exibindo permissões, dono, tamanho e data.
+
+cd /caminho
+# Altera o diretório de trabalho atual para o caminho especificado (relativo ou absoluto).
+
+pwd
+# Exibe o caminho absoluto do diretório de trabalho corrente.
+
+cp -r origem destino
+# Copia arquivos ou diretórios recursivamente de origem para destino.
+
+mv origem destino
+# Move ou renomeia arquivos e diretórios.
+
+rm -rf alvo
+# Remove arquivos ou diretórios recursivamente sem confirmação (uso crítico, pode apagar todo o sistema se não usado com atenção)
+
+mkdir -p diretorio
+# Cria diretórios, incluindo diretórios pais caso não existam.
+
+touch arquivo.txt
+# Cria um arquivo vazio ou atualiza seus timestamps.
+
+cat arquivo.txt
+# Exibe o conteúdo de um arquivo no stdout.
+
+less arquivo.txt
+# Visualiza arquivos grandes de forma paginada com navegação interativa.
+
+head -n 20 arquivo.txt
+# Mostra as primeiras N linhas de um arquivo.
+
+tail -n 50 arquivo.log
+# Mostra as últimas N linhas de um arquivo (use -f para acompanhar em tempo real).
+
+grep -R &#34;padrao&#34; .
+# Busca recursivamente por um padrão dentro de arquivos.
+
+find /caminho -type f -name &#34;*.py&#34;
+# Localiza arquivos conforme critérios como nome, tipo ou extensão.
+
+chmod 755 arquivo.sh
+# Modifica permissões de acesso usando notação octal.
+
+chown usuario:grupo arquivo
+# Altera proprietário e grupo de um arquivo ou diretório.
+
+ps aux
+# Lista todos os processos em execução com detalhes.
+
+top
+# Monitor interativo de processos em tempo real.
+
+sudo comando
+# Executa um comando com privilégios administrativos.
+
+tar -czvf arquivo.tar.gz pasta/
+# Compacta e empacota arquivos/diretórios em formato .tar.gz.
+
+echo &#34;texto&#34;
+# Imprime texto no stdout ou redireciona saída para arquivos.
+
+&gt; arquivo.txt
+# Redireciona saída padrão para um arquivo (sobrescreve).
+
+&gt;&gt; arquivo.txt
+# Redireciona saída padrão para um arquivo (append).
+
+|
+# Pipe: envia a saída de um comando como entrada para outro.
+
+man comando
+# Exibe o manual detalhado de um comando.
+
+history
+# Mostra o histórico de comandos executados no shell.
+
+clear
+# Limpa o terminal.
+
+df -h
+# Exibe uso de espaço em disco em formato legível.
+
+du -sh pasta/
+# Mostra o tamanho total de um diretório.
+
+wget URL
+# Faz download de arquivos via HTTP, HTTPS ou FTP.
+</code></pre><p>Mas é importante dizer que toda distribuição Linux segue o padrão <a href="https://pt.wikipedia.org/wiki/POSIX">POSIX</a> ou seja, todo comando é o mesmo independente de qual Linux estamos usando.</p>
+<p>E também devemos saber que existem a <a href="https://pt.wikipedia.org/wiki/Shell_do_Unix#">Interface Shell</a> que é o intermediário entre o Kernel e o usuário, ou seja é o local onde vamos executar cada <a href="https://pt.wikipedia.org/wiki/Texto_simples">comando</a>, como fizemos acima. Acessamos cada shelll pelo <a href="https://en.wikipedia.org/wiki/Terminal_emulator">Emulador de Terminal</a> e pelo <a href="https://mateusmuller.me/2017/09/10/dica-de-lpic-1-o-que-e-e-como-funciona-o-runlevel-no-linux/">Run Level de CLI</a> para executarmos os comandos.</p>
+<p>Existem muitos shell&rsquo;s diferentes porque cada um deles é uma linguagem de comando e de script(Para automatização), tendo cada um mais modernidade e funcionalidades diferentes.</p>
+<p>Saibam também que existe o shell Gráfico que seria o <a href="https://pt.wikipedia.org/wiki/Ambiente_de_%C3%A1rea_de_trabalho">Ambiente Gráfico</a> ou GUI. Um exemplo de shell GUI seria sua área de trabalho ou gerenciador de arquivos no Windows, o Windows shell. Mais tarde falaremos sobre interface gráfica e servidor de display.</p>
+<p>O shell mais comum é o <a href="https://pt.wikipedia.org/wiki/Bash">BASH</a>, porém existem outros como ZSH, SH, Korn Shell, C Shell e Bourne Shell.</p>
+<p>Para saber qual Linguagem de comando seu terminal usa, execute:</p>
+<pre tabindex="0"><code>echo $SHELL
+</code></pre><h2 id="arch-linux-seguindo-o-coelho-na-cartola-e-chegando-na-mulher-de-vermelho-da-matrix">Arch Linux: Seguindo o Coelho na Cartola e Chegando na Mulher de vermelho da Matrix</h2>
+<p><img src="https://i.ibb.co/Pb3rk0F/Untitled-2026-02-27-0120.png" alt=""></p>
+<p>Esse slide eu mesmo criei no <a href="https://excalidraw.com/">Excalidraw</a> e é uma forma de representar visualmente o processo de instalação do Arch no Ambiente Live/Live CD, pode parecer complicado, mas se dividirmos em partes dá para entender, por isso vou explicar com calma cada ponto, e depois falarei do fluxo e como vamos juntar cada um deles para fazer a instalação.</p>
+<h3 id="ambientes-live-ou-livecd">Ambientes Live ou LiveCD</h3>
+<p>É um sistema que vem pré-pronto juntamente com a imagem ISO ou com o CD de instalação, lá temos todo o suporte para fazer partições, transferir pacotes e acessar o usuário root archiso para configuração avançada do sistema. Em um Sistema Operacional como o Windows isso é feito de forma automática, não precisamos criar, formatar e montar a partição <code>c:\</code>. Em outras distros Linux esse processo é automatizado pelo <a href="https://en.wikipedia.org/wiki/Calamares_(software)">calamares</a> que é um software de instalação de Linux.</p>
+<h3 id="partição-principal">Partição Principal</h3>
+<p>É o espaço que dedicamos para o nosso sistema operacional, é recomendável que um OS Linux tenha 60G para cima de espaço disponível durante sua instalação. Falaremos mais sobre disco, partição e montagem com detalhe mais para frente.</p>
+<h3 id="grub-e-sistema-uefiefi">GRUB e Sistema UEFI/EFI</h3>
+<p>Essa é a camada um pouco superior ou seja, mais para fora do Sistema Linux, coloquei desse jeito para facilitar a explicação, mas na real cada camada é apenas mais libs e novos componentes para encorpar mais o sistema. E se observamos no slide, essa parte está mais &ldquo;acima&rdquo; dos outros e</p>
+<p>o GDM, Wayland e Gnome que estão ainda mais acima, seria a camada &ldquo;mais alta&rdquo; deles, que representa o ambiente gráfico, como a área e trabalho que é uma interface GUI que forra a visão do usuário para as outras camadas mais &ldquo;abaixo&rdquo; do sistema, faremos a instalação deles no final do post, por isso vamos ignora-los por enquanto.</p>
+<p>Ambos esses processos ocorrem na primeira etapa do sistema, na inicialização. O UEFI é o substituto da BIOS ou seja, nela estamos inicializando os Drivers do Computador, o Secure Boot e o suporte a disco tanto o mais recente GPT quanto o mais antigo MBR, que irei detalhar eles mais tarde.</p>
+<p>Um <a href="https://wiki.archlinux.org/title/GRUB_(Portugu%C3%AAs)">GRUB</a> é um Gerenciado de <a href="https://linux.cosmosonline.com.br/glossario/o-que-e-boot-inicializacao-linux/">Boot</a> que carrega a imagem da kernel o <a href="https://en.wikipedia.org/wiki/Vmlinux">vmlinux</a> e inicializa o <a href="https://en.wikipedia.org/wiki/Systemd">Systemd</a>, que é um sistema de inicialização que carrega todos os <a href="https://en.wikipedia.org/wiki/Daemon_(computing)">daemons</a> presentes. É a partir dele que os processos iniciais do Boot serão carregados.</p>
+<p>Existe um suporte a um gerenciador de boot no UEFI que seria o <a href="https://en.wikipedia.org/wiki/REFInd">rEFInd</a>, porém o GRUB é a escolha popular padrão está presente em toda distro Linux. Alguns processos do boot será gravado no arquivo <code>.efi</code> no <code>/boot/EFI</code>.</p>
+<h3 id="chroot">CHROOT</h3>
+<p>É um comando <a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a> que significa Change Root. Esse comando vai mudar o root do processo atual e seus filhos. &ldquo;Perai, filhos? como assim?&rdquo;, isso mesmo, o &ldquo;/&rdquo; Root é o diretório Pai ou Raiz do nosso sistema, e os seus filhos são os Sub diretórios do pai, fica mais fácil compreender observando como uma árvore mesmo, Raiz e folhas.</p>
+<p><img src="https://blog.desdelinux.net/wp-content/uploads/2012/01/arbol-directorios1.png" alt=""></p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA1yVkOMy1z4Qvi-NAb-j1JCmsnUo8xy7zx6_Dkb_Qix7nSHIKCwg3rjwn8PhaO6f7dwktwtY6LJZVRAljLScbXSZv2VU8gM2k3VOicvBS6w-7GARPeJ0DN5Opoozbe8IBjGx7UqT38Tk/s640/hierarquia_linux.png" alt=""></p>
+<p>Com essas imagens fica mais fácil saber o porquê e onde modificar ou criar um arquivo de configuração para os diretórios padrões do Arch. A nível de curiosidade, esse padrão de árvores é uma <a href="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*DAoQrt1ja_JMDQUxN3sboA.png">estrutura de dados</a> chamados de <a href="https://pt.wikipedia.org/wiki/%C3%81rvore_(estrutura_de_dados)">Trees</a> e está presente em variados lugares, como em <a href="https://miro.medium.com/v2/resize:fit:640/format:webp/0*2zyGAstAusuPwlAM.gif">Linguagens de programação Orientadas a Objetos</a>, em todo o tipo de sistema de arquivos, como nos de Windows e no <a href="https://miro.medium.com/v2/resize:fit:1400/1*mMmuOhNytgqP7lrU9HPTpw.jpeg">DOM</a> de HTML.</p>
+<p>Geralmente quem veio do Windows enxerga o Sistema Operacional como algo Fixo, que é imutável, porém essa visão é equivocada, o root do sistema ou seja o diretório raiz de um OS é apenas uma pasta com muitos arquivos espalhados de forma recursiva.</p>
+<p>O CHROOT vai mudar o &ldquo;ponto de observação&rdquo; do sistema para que o diretório filho alvo do comando passe a ser o novo root. Esse comando é fundamental para a instalação porque é nela que vamos transitar entre o ambiente live e a partição real do Sistema Operacional que está em <code>/dev/sda/</code>. Entraremos com mais detalhes mais tarde no passo a passo dos comandos <code>mnt</code>, e para criar as novas partições do disco.</p>
+<h1 id="começando-a-instalação">Começando a instalação</h1>
+<p>Agora começamos oficialmente a instalação de verdade do Arch, depois de muito teoria finalmente vamos colocar tudo em prática.</p>
+<p>Primeiro vamos particionar nosso disco dentro do ambiente live.</p>
+<h2 id="partição-de-disco">Partição de Disco</h2>
+<p>Não vou entrar muito em detalhes sobre <a href="https://www.cs.yale.edu/homes/aspnes/pinewiki/BlockDevices.html">Dispositivos de Blocos</a>, pois é um assunto complexo, com uma dificuldade insalubre, que dá um post 10x maior que esse. Porém pense que para um computador, dados são manipulados em Blocos de Bytes e Bits e são persistentes e de tamanho fixo (512B ou 4K). Por exemplo um HD Sata é um dispositivo de bloco.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/WD5000AAKX_16MB_Buffer.jpg/960px-WD5000AAKX_16MB_Buffer.jpg" alt=""></p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFXiJMaJ6b-8hLsMUJC_CCX1Im4_o_jpJhiA&amp;s" alt=""></p>
+<p>Isso é o básico para se saber o que é uma <a href="https://pt.wikipedia.org/wiki/Unidade_de_disco_r%C3%ADgido">Unidade de Disco Rígido</a>. No começo do I/O(Input e Output) esses blocos são mantidos temporariamente na RAM para a otimização das operações do sistema operacional, esse estado temporário é chamado de Buffer.</p>
+<p>Quando ocorre o <a href="https://en.wikipedia.org/wiki/Shutdown_(computing)">Shutdown</a> durante uma atualização por exemplo, esses dados em RAM se perdem antes do flush(gravação) para o disco, deixando o sistema de arquivos inconsistente. Isso é chamado de corrupção de dados.</p>
+<p>Não vou me alongar muito sobre nomes de dispositivos de armazenamento, porém aqui no meu sistema é <code>/dev/sda</code> que é o dispositivo <code>a</code>, e o primeiro dispositivo descoberto.</p>
+<p><code>/dev/sda1</code> seria a partição <code>1</code> no dispositivo <code>a</code>.</p>
+<p>Como estou em uma máquina virtual, meu dispositivo de armazenamento vai ser um HD SATA, mas na prática a maioria dos computadores modernos, provavelmente vão estar equipados com um SSD, pois oferece ganho de desempenho e <a href="https://recoverydata.com.br/blog/quanto-tempo-dura-um-hd-e-sua-vida-util/#:~:text=Em%20geral%2C%20a%20maioria%20dos,que%20isso%20com%20cuidados%20adequados.">durabilidade mecânica</a> pois um HD externo, por exemplo precisa de um imã e um disco para ler dados, fazendo ele ser muito sensível.</p>
+<p>Então apenas o nome muda, sendo <a href="https://wiki.archlinux.org/title/Device_file_(Portugu%C3%AAs)#NVMe">NVMe</a>, Como não vou fazer uma instalação usando o SSD, vou apenas deixar claro que provavelmente apenas o nome vai mudar junto com a ordem de reconhecimento.</p>
+<p>Para listar o seus dispositivo:</p>
+<pre tabindex="0"><code>fdisk -l
+</code></pre><p>Se o disco SATA ou NVMe não aparecer consulte: <a href="https://wiki.archlinux.org/title/Partitioning_(Portugu%C3%AAs)#Unidades_n%C3%A3o_ficam_vis%C3%ADveis_quando_o_RAID_do_firmware_est%C3%A1_habilitado">Este Guia</a></p>
+<p>Com isso vamos particionar o disco e criar um volume nessa partição. O que é volume? volume é quando a partição sai do meio físico de ser apenas um espaço do HD e passa a ter um único sistema de arquivo, contendo a interface lógica do sistema operacional, por isso volume pode ser chamado também de unidade lógica.</p>
+<p>Então vamos particionar o nosso disco, e formatar para ser um volume. Para isso vamos usar o comando <code>fdisk</code>.</p>
+<pre tabindex="0"><code>fdisk _/dev/o_disco_a_ser_particionado_
+</code></pre><p>Deixando claro que apenas farei a partição do sistema <code>EFI</code>, uma de <code>SWAP</code> e outra do diretório raiz <code>/</code>, que é apenas o necessário.</p>
+<p>Para saber mais sobre o <a href="https://guialinux.uniriotec.br/fdisk/#:~:text=Algumas%20op%C3%A7%C3%B5es%20do%20comando&amp;text=S%C3%A3o%20valores%20v%C3%A1lidos%3A%20512%2C%201024,nas%20vers%C3%B5es%20antigas%20do%20kernel.">fdisk</a> ou</p>
+<pre tabindex="0"><code>pacman -S man 
+man fdisk
+</code></pre><p><code>fdisk</code> é um comando interativo, ou seja, o comando pelo terminal vai te dando opções e o usuário seleciona. Para facilitar a partição e formatação, vou colocar aqui o guia das opções para formatar essas três partições com esses layouts, mas deixando claro que qualquer erro é sua responsabilidade, leia atentamente:</p>
+<pre tabindex="0"><code>EFI = 512M
+SWAP = (Opcional mas no mínimo 3G)
+&#34;/&#34; Root = o espaço que sobrou (Recomendado 60G)
+</code></pre><h4 id="atenção-não-crie-uma-partição-efi-se-estiver-fazendo-dual-boot">ATENÇÃO: NÃO CRIE UMA PARTIÇÃO EFI SE ESTIVER FAZENDO DUAL BOOT</h4>
+<pre tabindex="0"><code>fdisk /dev/sda
+
+Welcome to fdisk (util-linux 2.x).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+# Dentro do fdisk:
+g                # Nova tabela GPT
+n                # Nova partição (EFI)
+Enter            # Número 1
+Enter            # First sector default
++512M            # Tamanho EFI
+t                # Mudar tipo
+1                # Ou uefi/EF
+
+n                # Nova partição SWAP
+Enter            # Número 2
+Enter            # First sector default
++3G              # Tamanho do SWAP
+t                # Mudar tipo
+2                # Numero da Partição
+19               # Ou swap
+
+n                # Nova partição (root)
+Enter            # Número 3
+Enter            # First sector default
+Enter            # Last sector default → pega o resto (~60 GB)
+
+p                # Verifica
+w                # Salva e sai
+</code></pre><p>Agora concluindo temos:</p>
+<pre tabindex="0"><code>/dev/sda  # O dispositivo
+/dev/sda1 # Partição de UEFI/EFI
+/dev/sda2 # Partição do SWAP
+/dev/sda3 # &#34;/&#34; partição ROOT
+</code></pre><h2 id="formatando-as-partições-do-novo-sistema">Formatando as Partições do Novo Sistema</h2>
+<p>Vamos agora formatá-las para criar volumes, como já expliquei antes.</p>
+<p>Formatar partição Raiz que será formatada para o sistema de arquivo simples ext4.:</p>
+<pre tabindex="0"><code>mkfs.ext4 /dev/sda3 
+</code></pre><p>Monte a partição de SWAP com:</p>
+<pre tabindex="0"><code>mkswap /dev/sda2
+</code></pre><p>Por último vamos formatar a partição de sistema EFI com o formato padrão FAT32</p>
+<h4 id="atenção-apenas-formate-o-seu-efi-se-o-criou-antes-não-formate-a-partição-efi-se-estiver-fazendo-dual-boot">ATENÇÃO: APENAS FORMATE O SEU EFI SE O CRIOU ANTES, NÃO FORMATE A PARTIÇÃO EFI SE ESTIVER FAZENDO DUAL BOOT</h4>
+<pre tabindex="0"><code>mkfs.fat -F 32 /dev/sda1
+</code></pre><h2 id="montando-as-partições-no-novo-sistema">Montando as Partições no Novo Sistema</h2>
+<p><code>/mnt</code> será o <code>&quot;/&quot;</code> root do nosso novo sistema, vamos montá-lo:</p>
+<pre tabindex="0"><code>mount /dev/sda3 /mnt
+</code></pre><p>Agora vamos criar o resto do nosso sistema usando <code>/mnt</code> como nosso novo sistema operacional. <code>--mkdir</code> para especificar.</p>
+<pre tabindex="0"><code>mount --mkdir /dev/sda1 /mnt/boot
+</code></pre><p>Habilite o SWAP:</p>
+<pre tabindex="0"><code>swapon /dev/sda2
+</code></pre><p>Com isso vamos ter criado o diretório <code>/mnt</code> dentro do ambiente live, onde vamos ter montado cada partição nele, como disse antes, quando montamos estamos criando volumes para por diretórios e arquivos, então dentro de <code>/mnt</code> vai ter <code>/mnt/boot/</code>.</p>
+<p>Temos nesse momento um sistema Linux dentro do outro. Quando instalamos de fora os pacotes e o kernel para dentro desse &ldquo;novo sistema&rdquo; que está dentro de <code>/mnt</code>, ele já será um sistema operacional usável.</p>
+<p>Os diretórios padrões como <code>/tmp</code>, <code>/dev</code>, <code>/bin</code>, <code>/home</code>, <code>/etc</code> serão incluídos de forma automática com o <a href="https://wiki.archlinux.org/title/Arch_boot_process_(Portugu%C3%AAs)#initramfs">initramfs</a> porque vamos instalar o kernel com o <a href="https://man.archlinux.org/man/pacstrap.8">pacstrap</a>.  Assim quando removermos a mídia de instalação(o pendrive bootável), sairemos do ambiente live/liveCD e o sistema estará pronto, tendo <code>/mnt</code> como uma nova raiz <code>/</code>.</p>
+<h2 id="pré-chroot-instalando-o-kernel-e-mais-pacotes-de-fora-para-dentro">Pré-CHROOT: Instalando o Kernel e mais pacotes &ldquo;de Fora para Dentro&rdquo;</h2>
+<p>Agora vamos instalar os pacotes essenciais para podermos fazer CHROOT para nosso novo sistema. Colocaremos o pacote base, kernel e firmware para termos todos os recursos do ambiente live. Adicionarei também o pacote <code>sudo</code> e <code>vim</code> manualmente e o pacote <code>amd-ucode</code> para correção de segurança, se estiver com o processador INTEL ao invés do AMD, instale <code>intel-ucode</code>.</p>
+<p>Já que sairemos do ambiente live, também teremos que instalar o pacote daemon <code>NetworkManager</code> para quando chegarmos dentro do nosso sistema novo estivermos conexão com WI-Fi.</p>
+<p>Para usuários como eu que instalaram pelo VirtualBox, recomendo o pacote <code>virtualbox-guest-utils</code> para evitar bugs com drivers, como os de display, teclado e mouse.</p>
+<pre tabindex="0"><code>pacstrap -K /mnt base linux linux-firmware vim sudo amd-ucode networkmanager virtualbox-guest-utils
+</code></pre><h2 id="configurando-o-sistema">Configurando o Sistema</h2>
+<p>Agora estamos preparados para definir com o <code>chroot</code> o  diretório filho <code>/mnt</code> como raiz. Antes vamos gerar um arquivo <code>fstab</code> para salvar o ponto de montagem e incluir no Systemd durante a inicialização para automatizar os comando de montagem.</p>
+<pre tabindex="0"><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre><p>Para confirmar abra o arquivo <code>/mnt/etc/fstab</code> e edite-o caso haja erros.</p>
+<p>Agora mude a raiz para o novo sistema:</p>
+<pre tabindex="0"><code>arch-chroot /mnt
+</code></pre><p>Agora estamos Oficialmente e finalmente dentro do nosso Arch Linux.</p>
+<h3 id="defina-horário">Defina Horário</h3>
+<pre tabindex="0"><code>ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+</code></pre><h3 id="execute-hwclock-para-definir-horário-utc">Execute <code>hwclock</code> para definir horário UTC</h3>
+<pre tabindex="0"><code>hwclock --systohc
+</code></pre><p>Para mais informações em <a href="https://wiki.archlinux.org/title/Installation_guide_(Portugu%C3%AAs)#Hor%C3%A1rio">Horário</a> no guia do ArchWiki.</p>
+<h3 id="localização">Localização</h3>
+<p>Faça o mesmo passo a passo para localização no tópico de Pré-instalação desse post.</p>
+<p>E crie o arquivo <code>/etc/vconsole.conf</code> para manter a persistência do layout do teclado, adicione nesse arquivo:</p>
+<pre tabindex="0"><code>KEYMAP=br-abnt2
+</code></pre><h3 id="configure-a-rede">Configure a Rede</h3>
+<p>Crie o arquivo de hostname em <code>/etc/hostname</code>, adicione:</p>
+<pre tabindex="0"><code>seuhostname
+</code></pre><p>Agora ative o NetworkManager para termos WI-Fi disponível no novo sistema, com o comando <code>systemctl</code> ativando o daemon.</p>
+<pre tabindex="0"><code>systemctl enable NetworkManager
+</code></pre><h3 id="defina-a-senha-do-usuário-root">Defina a Senha do Usuário Root</h3>
+<p>Adicione uma senha forte mas não o suficiente para você esquecer com facilidade, pois precisamos dela para entrar no sistema recém-instalado.</p>
+<pre tabindex="0"><code>passwd
+</code></pre><h3 id="instalando-o-grub">Instalando o GRUB</h3>
+<p>Agora vamos instalar o famoso GRUB. Dentro do chroot instale os pacotes <code>grub</code> e <code>efibootmgr</code>.</p>
+<pre tabindex="0"><code>pacman -S grub efibootmgr
+</code></pre><p>Agora para instalar o aplicativo EFi do GRUB em <code>/mnt/boot/EFI/GRUB</code> e seus módulos para <code>/boot/grub/x86_64-efi/</code> execute o comando:</p>
+<pre tabindex="0"><code>grub-install --target=x86_64-efi --efi-directory=/mnt/boot --bootloader-id=GRUB
+</code></pre><p>Se por algum motivo for necessário executar esse comando no ambiente live, fora do sistema instalado, execute isso:</p>
+<pre tabindex="0"><code>grub-install --target=x86_64-efi --efi-directory=/mnt/boot/ --bootloader-id=GRUB --boot-directory=/mnt/boot
+</code></pre><p>A opção <code>--boot-directory=</code> deve conter o caminho para o <code>/boot</code></p>
+<p>Após a instalação do GRUB o seu diretório principal estará em <code>/boot/grub/</code>.</p>
+<p>O último passo é gerar o arquivo de configuração principal:</p>
+<pre tabindex="0"><code>grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><p>Caso esteja fazendo dual boot: <a href="https://wiki.archlinux.org/title/GRUB_(Portugu%C3%AAs)#Detectando_outros_sistemas_operacionais">leia isso</a></p>
+<p>Instalação do GRUB no sistema BIOS: <a href="https://wiki.archlinux.org/title/GRUB_(Portugu%C3%AAs)#Sistemas_BIOS">leia isso</a></p>
+<h2 id="reiniciando-saindo-do-ambiente-live">Reiniciando: saindo do Ambiente Live</h2>
+<p>Saia do ambiente <code>chroot</code> digitando <code>exit</code>. Desmonte todas as partições com o comando:</p>
+<pre tabindex="0"><code>umount -R /mnt
+</code></pre><p>E finalmente reinicie a máquina digitando:</p>
+<pre tabindex="0"><code>reboot
+</code></pre><p>Remova a mídia de instalação.</p>
+<p>E autentique-se com o seu usuário root e a senha que você definiu.</p>
+<p>Não é recomendado por questões de <a href="https://wiki.archlinux.org/title/Security">Segurança</a> permanecer no usuário root, por isso vamos criar um usuário <code>sudo</code> que vai usar os privilégios do root, porém com verificação por senha.</p>
+<pre tabindex="0"><code># 1. Crie o usuário (troque &#34;seunome&#34; pelo nome que quiser) 
+useradd -m -G wheel seunome
+
+# 2. Defina uma senha forte para o usuário 
+passwd seunome
+</code></pre><p>Agora usaremos o comando <code>visudo</code> para liberar o <code>sudo</code> para o <a href="https://wiki.archlinux.org/title/Users_and_groups_(Portugu%C3%AAs)">grupo </a> <code>wheel</code>.</p>
+<pre tabindex="0"><code>visudo
+</code></pre><p>Quando abrir o editor pelo vim, procure essa linha, se não tiver crie:</p>
+<pre tabindex="0"><code>#%wheel ALL=(ALL:ALL) ALL
+</code></pre><p>Remova o &ldquo;#&rdquo; (se tiver) para descomentar, salve e saia do vim com <code>:wq!</code>.</p>
+<p>É recomendado também adicionar o usuário novo em alguns grupos úteis, com esse comando:</p>
+<pre tabindex="0"><code>usermod -aG video,audio,storage,network,lp seunome
+</code></pre><p>Com isso, todo comando que for preciso executar com privilégios root é só colocar <code>sudo</code> no começo do comando. Vamos testar?</p>
+<p>Vamos agora atualizar os pacotes já instalados com:</p>
+<pre tabindex="0"><code>sudo pacman -Syu
+</code></pre><p>Dê uma olhada na seção <a href="https://wiki.archlinux.org/title/Installation_guide_(Portugu%C3%AAs)#P%C3%B3s-instala%C3%A7%C3%A3o">Pós-instalação da wiki</a> para mais detalhes sobre segurança e instalações de pacotes e programas para complementar o sistema.</p>
+<h1 id="ambiente-gráfico-gnome--wayland">Ambiente Gráfico: Gnome + Wayland</h1>
+<p>Finalmente, esse post foi bem longo, mas ainda não chegamos no final ainda, vamos instalar agora um ambiente gráfico para fechar com chave de ouro.</p>
+<p>Ambiente gráfico é outro assunto que renderia um post inteiro mas não aguento mais digitar&hellip; Então falarei apenas do básico.</p>
+<p>Como interface gráfica usaremos o <a href="https://pt.wikipedia.org/wiki/GNOME_Shell">Gnome Shell</a>, que vai ser o conjunto área de trabalho, painel de controle e barra de notificação. Existem outros como KDE Plasma e XFCE.</p>
+<p>E como servidor de display, que será o <a href="https://pt.wikipedia.org/wiki/Wayland_(protocolo_de_servidor_gr%C3%A1fico)">Wayland</a>, uma alternativa seria o i3 como WM ou Xorg. Ele carregará os drivers de exibição que estarão no meu pacote <code>virtualbox-guest-utils</code> e configurará variáveis de ambientes como o $DISPLAY que serve para indexar a quantidade de monitor e configurar desktops remotos via endereço IP. Além disso ele vai compor o Gnome Shell para nós.</p>
+<p>Vamos primeiro instalar o pacote <code>gnome</code> que contém o ambiente e um subconjunto de aplicativos integrados.</p>
+<pre tabindex="0"><code>sudo pacman -S gnome gdm
+</code></pre><p>O GDM é o gerenciador de exibição do Gnome e um programa que gerencia servidores gráficos, além de lidar com login que vai iniciar de forma automática o Gnome Shell.</p>
+<p>Depois da instalação vamos ativar o GDM com systemctl usando:</p>
+<pre tabindex="0"><code>sudo systemctl enable gdm
+</code></pre><p>Para confirmar se foi ativado:</p>
+<pre tabindex="0"><code>sudo systemctl status gdm
+</code></pre><p>Agora finalizando apenas execute <code>sudo reboot</code>. O GDM é identificado, carregando a interface de login.</p>
+<p>Com isso entramos no ambiente do Gnome.</p>
+<p><img src="https://i.ibb.co/ccPjKpd8/Captura-de-tela-2026-03-05-011156.png" alt=""></p>
+<h1 id="finalizando">Finalizando</h1>
+<p>Fizemos a instalação completa do Arch Linux, do kernel e as partições até o ambiente gráfico. Existem muitas coisas para fazer dentro do sistema já pronto, como a personalização para deixar as coisas ainda mais bonitas, colocar <code>themes</code> e <code>icons</code> no Gnome e o pacote de configuração do <a href="https://hashir.blog/assets/final-starship-catppuccin.zPCjMxUN_2c1PrT.webp">Power Level 10k</a> no emulador de terminal.</p>
+<p>Além de um ecossistema de trabalho para programador com ferramenta como Git, <code>asdf</code>, Docker, LazyVim, Banco de dados e ZSH, tudo integrado via terminal, mas isso é assunto para outro post.</p>
+<hr>
+
+        
+        <div class="post-comments">
+            <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "olavodotpys-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+        <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+    
+    <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+</svg>
+<script>
+    let backToTopButton = document.getElementById("btt-button");
+
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+        <div id="commento"></div>
+    <script type="text/javascript" src="/disqus/coments.js" ></script>
+  
+    
+
+    
+
+    
+
+        
+            
+        
+
+        
+
+        
+        
+
+        
+
+    
+
+    
+        <span>&copy; 2026 Olavo Bilac A. Neto</span>
+    
+
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

@@ -1,20 +1,16 @@
-baseURL = 'https://olavodotpy.github.io/'
-defaultContentLanguage = "pt-br"
-languageCode = 'en'
-enableRobotsTXT = true
+baseURL = 'https://olavopx.github.io/'
 title = "Olavo Bilac's Blog"
 theme = "gokarna"
 
+defaultContentLanguage = "pt-br"
+languageCode = 'pt-br'
+
+enableRobotsTXT = true
+
 [menu]
   [[menu.main]]
-    # Display name
     name = "Posts"
-
-    # Relative URL slug (appended to baseURL)
     url = "/posts/"
-
-    # Lower weights are listed first in the menu (leftmost); higher weights are
-    # listed last in the menu (rightmost)
     weight = 1
 
   [[menu.main]]
@@ -24,12 +20,9 @@ theme = "gokarna"
 
   [[menu.main]]
     identifier = "github"
-
-    url = "https://github.com/olavodotpy"
+    name = "GitHub"
+    url = "https://github.com/olavopx"
     weight = 3
-    
-    # Surround the menu entry (or name) with HTML content, such as Feather
-    # icons: https://feathericons.com
     pre = "<span data-feather='github'></span>"
     post = ""
 
@@ -39,18 +32,36 @@ theme = "gokarna"
 
 [params]
   accentColor = "#C0C0C0"
-
-  footer = "Olavo B. A. Neto"
-
-  metaKeywords = ["blog", "gokarna", "hugo", "Programador", "olavodotpy", "Olavo Bilac", "Ações", "bolsa de valores", "B3", "Developer"]
+  footer = "Olavo Bilac A. Neto"
 
   numberPostsOnHomePage = 10
-
   showPostsOnHomePage = "recent"
+  fontSize = "1.1rem"
+
+  showBackToTopButton = true
 
   togglePreviousAndNextButtons = false
+
+  avatarURL = "https://avatars.githubusercontent.com/u/137653930?s=400&u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&v=4"
+  avatarSize = "size-m"  
+  avatarAltText = "avatar"
+
+  metaKeywords = [
+      "blog",
+      "gokarna",
+      "hugo",
+      "programador",
+      "olavopx",
+      "Olavo Bilac",
+      "ações",
+      "bolsa de valores",
+      "B3",
+      "developer",
+      "ArchLinux",
+      "linux",
+  ]
 
   customFooterHTML = '''
     <div id="commento"></div>
     <script type="text/javascript" src="/disqus/coments.js" ></script>
-'''
+  '''

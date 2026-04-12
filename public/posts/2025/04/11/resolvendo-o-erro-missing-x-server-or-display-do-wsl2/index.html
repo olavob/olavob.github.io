@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
         :root {
             --accent-color: #C0C0C0;
-            --font-size: 17.5px;
+            --font-size: 1.1rem;
         }
     </style>
 
@@ -18,26 +18,26 @@
     
 
     
-    <title>Resolvendo O Erro &lt;strong&gt;Missing X Server or Display&lt;/strong&gt; Do WSL2.</title>
+    <title>Resolvendo o Erro: &ldquo;Missing X Server or Display&rdquo; Do WSL2</title>
     <meta name="description" content="Contexto do Problema Essa documentação foi criada porque estou mexendo com a parte de redes de sockets, IP, portas e Servidores HTTP. Que coincidentemente bateu …">
-    <meta name="keywords" content='blog, gokarna, hugo, Programador, olavodotpy, Olavo Bilac, Ações, bolsa de valores, B3, Developer, linux, windows, wsl, xserver, debugging'>
+    <meta name="keywords" content='blog, gokarna, hugo, programador, olavopx, Olavo Bilac, ações, bolsa de valores, B3, developer, ArchLinux, linux, windows, wsl, xserver, debugging'>
 
-    <meta property="og:url" content="https://olavodotpy.github.io/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
+    <meta property="og:url" content="http://localhost:1313/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Resolvendo O Erro Missing X Server or Display Do WSL2.">
+    <meta property="og:title" content="Resolvendo o Erro: &ldquo;Missing X Server or Display&rdquo; Do WSL2">
     <meta property="og:description" content="Contexto do Problema Essa documentação foi criada porque estou mexendo com a parte de redes de sockets, IP, portas e Servidores HTTP. Que coincidentemente bateu …">
-    <meta property="og:image" content="https://olavodotpy.github.io/">
-    <meta property="og:image:secure_url" content="https://olavodotpy.github.io/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
+    <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Resolvendo O Erro Missing X Server or Display Do WSL2.">
+    <meta name="twitter:title" content="Resolvendo o Erro: &ldquo;Missing X Server or Display&rdquo; Do WSL2">
     <meta name="twitter:description" content="Contexto do Problema Essa documentação foi criada porque estou mexendo com a parte de redes de sockets, IP, portas e Servidores HTTP. Que coincidentemente bateu …">
-    <meta property="twitter:domain" content="https://olavodotpy.github.io/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
-    <meta property="twitter:url" content="https://olavodotpy.github.io/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
-    <meta name="twitter:image" content="https://olavodotpy.github.io/">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
 
     
-    <link rel="canonical" href="https://olavodotpy.github.io/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
+    <link rel="canonical" href="http://localhost:1313/posts/2025/04/11/resolvendo-o-erro-missing-x-server-or-display-do-wsl2/">
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -49,7 +49,7 @@
     <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
 
     
-    <script src="/js/bundle.min.70293498aa96b2dbb767ec11a622eb2266d8fc37a0fff88233a82952e3c72b15.js" integrity="sha256-cCk0mKqWstu3Z&#43;wRpiLrImbY/Deg//iCM6gpUuPHKxU="></script>
+    <script src="/js/bundle.min.7136b4abac7b277aba8bc933917f4602d39a5c44f5590be687244bc86ef4f162.js" integrity="sha256-cTa0q6x7J3q6i8kzkX9GAtOaXET1WQvmhyRLyG708WI="></script>
 
     
     
@@ -62,23 +62,29 @@
     <nav class="header-nav">
 
         
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4' alt="avatar">
+            </a>
+        </div>
+        
 
         <div class="nav-title">
-            <a class="nav-brand" href="https://olavodotpy.github.io/">Olavo Bilac&#39;s Blog</a>
+            <a class="nav-brand" href="http://localhost:1313/">Olavo Bilac&#39;s Blog</a>
         </div>
 
         <div class="nav-links">
             
             <div class="nav-link">
-                <a href="https://olavodotpy.github.io/posts/" aria-label="" > Posts </a>
+                <a href="http://localhost:1313/posts/" aria-label="" > Posts </a>
             </div>
             
             <div class="nav-link">
-                <a href="https://olavodotpy.github.io/tags/" aria-label="" > Tags </a>
+                <a href="http://localhost:1313/tags/" aria-label="" > Tags </a>
             </div>
             
             <div class="nav-link">
-                <a href="https://github.com/olavodotpy" aria-label="github" ><span data-feather='github'></span>  </a>
+                <a href="https://github.com/olavopx" aria-label="github" ><span data-feather='github'></span> GitHub </a>
             </div>
             
 
@@ -101,15 +107,15 @@
             <ul class="nav-hamburger-list visibility-hidden">
                 
                 <li class="nav-item">
-                    <a href="https://olavodotpy.github.io/posts/" > Posts </a>
+                    <a href="http://localhost:1313/posts/" > Posts </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="https://olavodotpy.github.io/tags/" > Tags </a>
+                    <a href="http://localhost:1313/tags/" > Tags </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="https://github.com/olavodotpy" ><span data-feather='github'></span>  </a>
+                    <a href="https://github.com/olavopx" ><span data-feather='github'></span> GitHub </a>
                 </li>
                 
                 <li class="nav-item dark-theme-toggle">
@@ -126,7 +132,7 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>Resolvendo O Erro <strong>Missing X Server or Display</strong> Do WSL2.</h1>
+        <h1>Resolvendo o Erro: &ldquo;Missing X Server or Display&rdquo; Do WSL2</h1>
 
         
 
@@ -158,23 +164,23 @@
         <ul class="post-tags">
           
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/linux">linux</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/linux">linux</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/windows">windows</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/windows">windows</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/wsl">wsl</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/wsl">wsl</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/xserver">xserver</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/xserver">xserver</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/debugging">debugging</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/debugging">debugging</a></li>
            
          
         </ul>
@@ -211,9 +217,9 @@
 <p>Já o ChatGPT me ajudou com os comandos de Powershell, que me poupou horas de google e documentação.</p>
 <p>Para rodar um programa dentro do terminal é só instalá-lo usando o gerenciadores de pacotes <code>yay</code>(se instalado) ou o <code>pacman</code> e executá-lo, algo como <code>chromium</code>.</p>
 <p>Quando fui executar deu o erro, <code>Missing X server or $DISPLAY</code>, tentei dar o export do seguinte comando seguindo as instruções do Deepseek:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export DISPLAY<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>grep nameserver /etc/resolv.conf | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#66d9ef">)</span>:0.0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export DISPLAY<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>grep nameserver /etc/resolv.conf | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#66d9ef">)</span>:0.0
 </span></span></code></pre></div><p>Ou até mesmo executar o Chromium com algumas Flags:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chromium --no-sandbox --disable-dev-shm-usage --use-gl<span style="color:#f92672">=</span>angle --disable-gpu
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chromium --no-sandbox --disable-dev-shm-usage --use-gl<span style="color:#f92672">=</span>angle --disable-gpu
 </span></span></code></pre></div><p>E mesmo assim o erro se repetia, me forçando a pensar mais a fundo.</p>
 <h2 id="resolução-do-erro">Resolução do Erro</h2>
 <p>Esse comando <code>export</code> pega o valor da variável nameserver dentro de <code>/etc/resolv.conf</code> e coloca como valor da nossa variável de ambiente
@@ -228,18 +234,18 @@ $DISPLAY. Então, vamos começar a destrinchar para entendermos o erro bobo que 
 <p>O comando Export é a pior forma de resolver esse problema no WSL, porém deu a mim a pista mais importante da resolução já que o $DISPLAY precisava de um IP para que o meu WSL pudesse se comunicar com o VcXsrv. Vamos dividir a resoluição em passos para facilitar.</p>
 <h4 id="passo-1-identificar-o-ip-do-host-windows">Passo 1: Identificar o IP do Host Windows</h4>
 <p>Vamos pegar o endereço IP do Windows para a comunicação com o WSL2 que usa a tecnologia de virtualização Hyper-v. Dentro de um powerShell execute:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Get-NetIPAddress -InterfaceAlias <span style="color:#e6db74">&#34;vEthernet (WSL (Hyper-V firewall))&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Get-NetIPAddress -InterfaceAlias <span style="color:#e6db74">&#34;vEthernet (WSL (Hyper-V firewall))&#34;</span>
 </span></span></code></pre></div><p>vamos confirmar a saida:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>InterfaceAlias    <span style="color:#960050;background-color:#1e0010">:</span> vEthernet (WSL (Hyper-V firewall))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>InterfaceAlias    <span style="color:#960050;background-color:#1e0010">:</span> vEthernet (WSL (Hyper-V firewall))
 </span></span></code></pre></div><p>e pegar o endereço IP:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>IPAddress         <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">172.23</span>.112.1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>IPAddress         <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">172.23</span>.112.1
 </span></span></code></pre></div><h4 id="passo-2-configurar-o-display-no-shell">Passo 2: Configurar o $DISPLAY no Shell</h4>
 <p>Para a insistência já que o resolv.conf é modificado automaticamente após a incialização, no seu <code>.bashrc</code> ou <code>.zshrc</code> adicione no final:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export DISPLAY=172.23.112.1:0.0&#39;</span> &gt;&gt; ~/.bashrc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export DISPLAY=172.23.112.1:0.0&#39;</span> &gt;&gt; ~/.bashrc
 </span></span><span style="display:flex;"><span>source ~/.bashrc  
 </span></span></code></pre></div><h4 id="passo-3-testar-o-ambiente-gráfico">Passo 3: Testar o Ambiente Gráfico</h4>
 <p>Não se esqueça de estar com o servidor X ligado no Windows sempre que for usar o ambiente gráfico. execute o chromium ou seu aplicativo grafico:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chromium  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chromium  
 </span></span></code></pre></div><p><img src="https://i.ibb.co/5gpX7HLK/Resolved-xserver-error.png" alt="Imagem do servidor funcionando"></p>
 <p>E lá está&hellip; funcionando perfeitamente. Resolver um problema após horas de tentantiva e erro é muito aliviante, é como receber uma notícia boa.</p>
 <p>A sequir um extra, um problema que topei no meio do caminho, mas é mais falta de atenção mesmo, já que basta apenas marca a opção correta da configuração do servidor:</p>
@@ -283,6 +289,31 @@ $DISPLAY. Então, vamos começar a destrinchar para entendermos o erro bobo que 
 
     
     
+        <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+    
+    <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+</svg>
+<script>
+    let backToTopButton = document.getElementById("btt-button");
+
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+
+    
     
 </div>
 
@@ -295,7 +326,7 @@ $DISPLAY. Então, vamos começar a destrinchar para entendermos o erro bobo que 
     
         <div id="commento"></div>
     <script type="text/javascript" src="/disqus/coments.js" ></script>
-
+  
     
 
     
@@ -316,7 +347,7 @@ $DISPLAY. Então, vamos começar a destrinchar para entendermos o erro bobo que 
     
 
     
-        <span>&copy; 2025 Olavo B. A. Neto</span>
+        <span>&copy; 2025 Olavo Bilac A. Neto</span>
     
 
     <span>

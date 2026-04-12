@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devops on Olavo Bilac&#39;s Blog</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <description>Recent content in Devops on Olavo Bilac&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 05 Mar 2026 16:08:42 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)</title>
+      <link>http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/</guid>
+      <description>&lt;p&gt;Antes de começar o Post irei fazer dois &lt;a href=&#34;https://www.merriam-webster.com/dictionary/rant&#34;&gt;&amp;ldquo;Rants&amp;rdquo;&lt;/a&gt; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que procuram aprender Linux, onde nesse caso obviamente vou dividir e generalizar os iniciantes em geral para simplificar a explicação do argumento, mas deixando claro que não é possível logicamente falar de todo o tipo de pessoas que existe no planeta.&lt;/p&gt;&#xA;&lt;p&gt;Cada indivíduo pode ter sua capacidade e dificuldade físicas e psicológicas para realizar uma determinada tarefa.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

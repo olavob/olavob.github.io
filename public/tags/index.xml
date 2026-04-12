@@ -2,73 +2,164 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Olavo Bilac&#39;s Blog</title>
-    <link>https://olavodotpy.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Olavo Bilac&#39;s Blog</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 12 Jun 2025 01:11:42 -0300</lastBuildDate>
-    <atom:link href="https://olavodotpy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 05 Mar 2026 16:08:42 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Debugging</title>
-      <link>https://olavodotpy.github.io/tags/debugging/</link>
-      <pubDate>Thu, 12 Jun 2025 01:11:42 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/debugging/</guid>
+      <title>Aprendizado</title>
+      <link>http://localhost:1313/tags/aprendizado/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/aprendizado/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Archlinux</title>
+      <link>http://localhost:1313/tags/archlinux/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computer-Science</title>
+      <link>http://localhost:1313/tags/computer-science/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devops</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guia</title>
+      <link>http://localhost:1313/tags/guia/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/guia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Instalação</title>
+      <link>http://localhost:1313/tags/instala%C3%A7%C3%A3o/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/instala%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://olavodotpy.github.io/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rant</title>
+      <link>http://localhost:1313/tags/rant/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/rant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sistemas-Operacionais</title>
+      <link>http://localhost:1313/tags/sistemas-operacionais/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/sistemas-operacionais/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>http://localhost:1313/tags/tutorial/</link>
+      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+      <guid>http://localhost:1313/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ações</title>
+      <link>http://localhost:1313/tags/a%C3%A7%C3%B5es/</link>
+      <pubDate>Wed, 10 Sep 2025 15:57:00 -0300</pubDate>
+      <guid>http://localhost:1313/tags/a%C3%A7%C3%B5es/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>B3</title>
+      <link>http://localhost:1313/tags/b3/</link>
+      <pubDate>Wed, 10 Sep 2025 15:57:00 -0300</pubDate>
+      <guid>http://localhost:1313/tags/b3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bolsa De Valores</title>
+      <link>http://localhost:1313/tags/bolsa-de-valores/</link>
+      <pubDate>Wed, 10 Sep 2025 15:57:00 -0300</pubDate>
+      <guid>http://localhost:1313/tags/bolsa-de-valores/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Economia</title>
+      <link>http://localhost:1313/tags/economia/</link>
+      <pubDate>Wed, 10 Sep 2025 15:57:00 -0300</pubDate>
+      <guid>http://localhost:1313/tags/economia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debugging</title>
+      <link>http://localhost:1313/tags/debugging/</link>
       <pubDate>Thu, 12 Jun 2025 01:11:42 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/debugging/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>https://olavodotpy.github.io/tags/windows/</link>
+      <link>http://localhost:1313/tags/windows/</link>
       <pubDate>Thu, 12 Jun 2025 01:11:42 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/windows/</guid>
+      <guid>http://localhost:1313/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Wsl</title>
-      <link>https://olavodotpy.github.io/tags/wsl/</link>
+      <link>http://localhost:1313/tags/wsl/</link>
       <pubDate>Thu, 12 Jun 2025 01:11:42 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/wsl/</guid>
+      <guid>http://localhost:1313/tags/wsl/</guid>
       <description></description>
     </item>
     <item>
       <title>Xserver</title>
-      <link>https://olavodotpy.github.io/tags/xserver/</link>
+      <link>http://localhost:1313/tags/xserver/</link>
       <pubDate>Thu, 12 Jun 2025 01:11:42 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/xserver/</guid>
+      <guid>http://localhost:1313/tags/xserver/</guid>
       <description></description>
     </item>
     <item>
       <title>Django</title>
-      <link>https://olavodotpy.github.io/tags/django/</link>
+      <link>http://localhost:1313/tags/django/</link>
       <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/django/</guid>
+      <guid>http://localhost:1313/tags/django/</guid>
       <description></description>
     </item>
     <item>
       <title>Gunicorn</title>
-      <link>https://olavodotpy.github.io/tags/gunicorn/</link>
+      <link>http://localhost:1313/tags/gunicorn/</link>
       <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/gunicorn/</guid>
+      <guid>http://localhost:1313/tags/gunicorn/</guid>
       <description></description>
     </item>
     <item>
       <title>Produção</title>
-      <link>https://olavodotpy.github.io/tags/produ%C3%A7%C3%A3o/</link>
+      <link>http://localhost:1313/tags/produ%C3%A7%C3%A3o/</link>
       <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/produ%C3%A7%C3%A3o/</guid>
+      <guid>http://localhost:1313/tags/produ%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Railway</title>
-      <link>https://olavodotpy.github.io/tags/railway/</link>
+      <link>http://localhost:1313/tags/railway/</link>
       <pubDate>Tue, 17 Dec 2024 22:52:34 -0300</pubDate>
-      <guid>https://olavodotpy.github.io/tags/railway/</guid>
+      <guid>http://localhost:1313/tags/railway/</guid>
       <description></description>
     </item>
   </channel>

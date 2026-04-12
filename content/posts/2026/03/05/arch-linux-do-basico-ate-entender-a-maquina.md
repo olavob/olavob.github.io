@@ -58,8 +58,14 @@ Uma vez lá dentro vamos "tocar" ou criar um arquivo: `touch teste.rb` e vamos a
 
 vou agora escrever uma função trivial em Ruby de "hello world".
 
-![](https://i.ibb.co/v6brT06Z/Captura-de-tela-2026-03-03-021353.png)
+```ruby
 
+def teste
+    puts "hello world"
+end
+
+teste
+```
 
 Para uma pessoa que apenas ficou no superficial isso basta, é realmente algo super simples, porém sua visão sobre esse código continua limitada por mais simples que ele seja.
 

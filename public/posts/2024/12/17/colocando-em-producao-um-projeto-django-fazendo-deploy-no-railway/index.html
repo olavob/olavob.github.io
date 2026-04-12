@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
         :root {
             --accent-color: #C0C0C0;
-            --font-size: 17.5px;
+            --font-size: 1.1rem;
         }
     </style>
 
@@ -18,26 +18,26 @@
     
 
     
-    <title>&lt;strong&gt;Deployando&lt;/strong&gt; um projeto Django!! Colocando em &lt;strong&gt;produção no Railway.&lt;/strong&gt;</title>
+    <title>Deployando um Projeto Django: Colocando em Produção no Railway</title>
     <meta name="description" content="Introdução Todo projeto que você pretende colocar em deploy para subir em domínio público, não apenas no seu ambiente de desenvolvimento, precisa de toda uma …">
-    <meta name="keywords" content='blog, gokarna, hugo, Programador, olavodotpy, Olavo Bilac, Ações, bolsa de valores, B3, Developer, django, produção, railway, gunicorn, debugging'>
+    <meta name="keywords" content='blog, gokarna, hugo, programador, olavopx, Olavo Bilac, ações, bolsa de valores, B3, developer, ArchLinux, linux, django, produção, railway, gunicorn, debugging'>
 
-    <meta property="og:url" content="https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
+    <meta property="og:url" content="http://localhost:1313/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Deployando um projeto Django!! Colocando em produção no Railway.">
+    <meta property="og:title" content="Deployando um Projeto Django: Colocando em Produção no Railway">
     <meta property="og:description" content="Introdução Todo projeto que você pretende colocar em deploy para subir em domínio público, não apenas no seu ambiente de desenvolvimento, precisa de toda uma …">
-    <meta property="og:image" content="https://olavodotpy.github.io/">
-    <meta property="og:image:secure_url" content="https://olavodotpy.github.io/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
+    <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Deployando um projeto Django!! Colocando em produção no Railway.">
+    <meta name="twitter:title" content="Deployando um Projeto Django: Colocando em Produção no Railway">
     <meta name="twitter:description" content="Introdução Todo projeto que você pretende colocar em deploy para subir em domínio público, não apenas no seu ambiente de desenvolvimento, precisa de toda uma …">
-    <meta property="twitter:domain" content="https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
-    <meta property="twitter:url" content="https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
-    <meta name="twitter:image" content="https://olavodotpy.github.io/">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
 
     
-    <link rel="canonical" href="https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
+    <link rel="canonical" href="http://localhost:1313/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -49,7 +49,7 @@
     <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
 
     
-    <script src="/js/bundle.min.70293498aa96b2dbb767ec11a622eb2266d8fc37a0fff88233a82952e3c72b15.js" integrity="sha256-cCk0mKqWstu3Z&#43;wRpiLrImbY/Deg//iCM6gpUuPHKxU="></script>
+    <script src="/js/bundle.min.7136b4abac7b277aba8bc933917f4602d39a5c44f5590be687244bc86ef4f162.js" integrity="sha256-cTa0q6x7J3q6i8kzkX9GAtOaXET1WQvmhyRLyG708WI="></script>
 
     
     
@@ -62,23 +62,29 @@
     <nav class="header-nav">
 
         
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4' alt="avatar">
+            </a>
+        </div>
+        
 
         <div class="nav-title">
-            <a class="nav-brand" href="https://olavodotpy.github.io/">Olavo Bilac&#39;s Blog</a>
+            <a class="nav-brand" href="http://localhost:1313/">Olavo Bilac&#39;s Blog</a>
         </div>
 
         <div class="nav-links">
             
             <div class="nav-link">
-                <a href="https://olavodotpy.github.io/posts/" aria-label="" > Posts </a>
+                <a href="http://localhost:1313/posts/" aria-label="" > Posts </a>
             </div>
             
             <div class="nav-link">
-                <a href="https://olavodotpy.github.io/tags/" aria-label="" > Tags </a>
+                <a href="http://localhost:1313/tags/" aria-label="" > Tags </a>
             </div>
             
             <div class="nav-link">
-                <a href="https://github.com/olavodotpy" aria-label="github" ><span data-feather='github'></span>  </a>
+                <a href="https://github.com/olavopx" aria-label="github" ><span data-feather='github'></span> GitHub </a>
             </div>
             
 
@@ -101,15 +107,15 @@
             <ul class="nav-hamburger-list visibility-hidden">
                 
                 <li class="nav-item">
-                    <a href="https://olavodotpy.github.io/posts/" > Posts </a>
+                    <a href="http://localhost:1313/posts/" > Posts </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="https://olavodotpy.github.io/tags/" > Tags </a>
+                    <a href="http://localhost:1313/tags/" > Tags </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="https://github.com/olavodotpy" ><span data-feather='github'></span>  </a>
+                    <a href="https://github.com/olavopx" ><span data-feather='github'></span> GitHub </a>
                 </li>
                 
                 <li class="nav-item dark-theme-toggle">
@@ -126,7 +132,7 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1><strong>Deployando</strong> um projeto Django!! Colocando em <strong>produção no Railway.</strong></h1>
+        <h1>Deployando um Projeto Django: Colocando em Produção no Railway</h1>
 
         
 
@@ -158,23 +164,23 @@
         <ul class="post-tags">
           
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/django">django</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/django">django</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/produ%C3%A7%C3%A3o">produção</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/produ%C3%A7%C3%A3o">produção</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/railway">railway</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/railway">railway</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/gunicorn">gunicorn</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/gunicorn">gunicorn</a></li>
            
          
            
-             <li class="post-tag"><a href="https://olavodotpy.github.io/tags/debugging">debugging</a></li>
+             <li class="post-tag"><a href="http://localhost:1313/tags/debugging">debugging</a></li>
            
          
         </ul>
@@ -200,7 +206,7 @@ lembre-se de listar no gitignore.</p>
 <pre tabindex="0"><code class="language-pip" data-lang="pip">pip freeze &gt; requirements.txt
 </code></pre><h3 id="subindo-arquivos-estáticos-no-railway">Subindo arquivos estáticos no Railway</h3>
 <p>Agora que realizamos todo esse processo, vamos ver o nosso código funcionando. Coloque <code>DEBUG = True</code> pra subir na máquina local e execute com o comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python manage.py runserver
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python manage.py runserver
 </span></span></code></pre></div><p>O Django tem um servidor local como o IP <code>http://127.0.0.1:8000(localhost)</code> que executa localmente na sua máquina, porém para fazer deploy não usaremos esse endereço.</p>
 <p>O próximo passo é escolher o serviço de hospedagem como Railway, AWS, Heroku, Google cloud, etc&hellip;</p>
 <p>Uma opção boa que na minha opnião é válida é o GitHub pages, que apenas hospeda arquivos estáticos em seu plano gratuito, não é muito útil pra mim nesse caso porque ele não tem um servidor em sí para metodos HTTP. Entretanto pode ser usado para portfolio ou até mesmo como blog se for com um HUGO ou Jekyll que são geradores de páginas estáticas.</p>
@@ -209,9 +215,9 @@ lembre-se de listar no gitignore.</p>
 <p>Todo o repositório de projetos reais e que podem escalar, deve ter branch separados por exemplo o staging para desenvolvedores testarem cada nova funcionalidade e correção de bugs e a branch main onde é a versão do usuário final e a mais estável possível.</p>
 <p>Os arquivos estáticos como os assets ou static: imagens, CSS e JavaScript. colocaremos no diretório como <code>myapp/static/myapp/assets/</code> note que o nome do app é usado no subdiretório para facilitar o Django de localizar os arquivos certo nos templates.</p>
 <p>Vamos também mexer no settings.py para configurar o <code>staticfiles</code> que é o diretório que entregaremos ao Railway para servir os arquivos estáticos em produção. No settings.py vamos colocar o enderço da raiz do projeto no <code>STATIC_ROOT</code> para localizar a montagem quando rodamos o comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python manage.py collectstatic
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python manage.py collectstatic
 </span></span></code></pre></div><p>colocaremos o caminho dos assets no <code>STATICFILES_DIRS</code> para localizar esses arquivos de maneira mais direta. Últimos passos para o primeiro deploy agora vai ser tornar esses arquivos estáticos mais rápidos e menos pesados para subir no Railway, usaremos o Whitenoise, no settings adicionaremos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>STATICFILES_STORAGE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;whitenoise.storage.CompressedManifestStaticFilesStorage&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>STATICFILES_STORAGE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;whitenoise.storage.CompressedManifestStaticFilesStorage&#34;</span>
 </span></span></code></pre></div><p>Assim como o requirements.txt que carrega as dependências para o Docker, usaremos o procfile para executarmos indiretamente os primeiros comandos assim que o container for iniciado. Um exemplo seria assim:</p>
 <pre tabindex="0"><code class="language-procfile" data-lang="procfile">web: source /opt/example/bin/activate
 web: python manage.py collectstatic
@@ -231,7 +237,7 @@ web: python manage.py collectstatic
 <p>Na primeira vez que implementei a REST não sabia do limite de worker muito menos do CPU e memória, e então, deu ruim, os sintomas foram, pagina muito lento para carregar e dando status code do tipo 5xx (Internal Error [CRITICAL] WORKER TIMEOUT).</p>
 <p>Cheguei a pesquisar no google sobre WORKER TIMEOUT e usuários do stack overflow falavam sobre acrescentar tempo de timeout e graceful-timeout no configfile do gunicorn, então, fiz essas modificações, a minha página só funciona 1 vez e quando atualizava novamente voltava ao erro. Pesquisei mais sobre o gunicorn e então descobri sobre os limites, workers e processos por requisições.</p>
 <p>Subi o meu gunicorn para produção com 2 worker. Porém por algum motivo o número de workers não subia, então defini no painel do Railway em &ldquo;Custom Start Command&rdquo; o seguinte comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gunicorn django_production.wsgi:application --bind 0.0.0.0:8080 --timeout <span style="color:#ae81ff">120</span> --workers <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gunicorn django_production.wsgi:application --bind 0.0.0.0:8080 --timeout <span style="color:#ae81ff">120</span> --workers <span style="color:#ae81ff">2</span>
 </span></span></code></pre></div><p>Quando se aumenta recursos como CPU e memória isso se chama Escalabilidade Vertical, aumentando o número de worker para ter mais poder de processamento. Com isso resolvemos o problema do erro interno, só restando um, o problema de limite de requisição da API.</p>
 <p>Pymemcache é um sistema de cache, uma forma de evitar requisições e número de operações do código. O melhor exemplo que eu poderia dar é:</p>
 <p>Eu tenho um sistema que precisa pegar uma lista de produtos do meu ecommerce, para cada 1 mil usuários eu tenho em média 5 requi/s, e em cada requisição, acontece o seguinte: O meu código pega os itens do banco de dados, a partir de um loop while, e coloca todo o conteúdo dentro do meu contexto de variáveis para ser usado na montagem do template.</p>
@@ -271,6 +277,31 @@ web: python manage.py collectstatic
 
     
     
+        <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+    
+    <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+</svg>
+<script>
+    let backToTopButton = document.getElementById("btt-button");
+
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+
+    
     
 </div>
 
@@ -283,7 +314,7 @@ web: python manage.py collectstatic
     
         <div id="commento"></div>
     <script type="text/javascript" src="/disqus/coments.js" ></script>
-
+  
     
 
     
@@ -304,7 +335,7 @@ web: python manage.py collectstatic
     
 
     
-        <span>&copy; 2024 Olavo B. A. Neto</span>
+        <span>&copy; 2024 Olavo Bilac A. Neto</span>
     
 
     <span>
