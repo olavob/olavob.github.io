@@ -1,4 +1,4 @@
-baseURL = 'https://olavopx.github.io/'
+baseURL = 'https://olavob.github.io/'
 title = "Olavo Bilac's Blog"
 theme = "gokarna"
 
@@ -21,7 +21,7 @@ enableRobotsTXT = true
   [[menu.main]]
     identifier = "github"
     name = "GitHub"
-    url = "https://github.com/olavopx"
+    url = "https://github.com/olavob"
     weight = 3
     pre = "<span data-feather='github'></span>"
     post = ""
@@ -32,11 +32,11 @@ enableRobotsTXT = true
 
 [params]
   accentColor = "#C0C0C0"
-  footer = "Olavo Bilac A. Neto"
+  footer = "Olavo Bilac"
 
   numberPostsOnHomePage = 10
   showPostsOnHomePage = "recent"
-  fontSize = "1.1rem"
+  fontSize = "1rem"
 
   showBackToTopButton = true
 
