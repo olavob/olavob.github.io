@@ -1,8 +1,8 @@
 # Personal Blog
 
-Static blog built with **Hugo** using the [goKarna-hugo](https://github.com/olavodotpy/gokarna-hugo) theme (maintained fork).
+Static blog built with **Hugo** using the [goKarna-hugo](https://github.com/olavob/gokarna-hugo) theme (maintained fork).
 
-Visit the blog: https://olavopx.github.io
+Visit the blog: https://olavob.github.io
 
 ## 🛠️ Tools Used
 
@@ -39,8 +39,8 @@ Install the following tools:
 ### 2. Clone the repository with the theme
 
 ```bash
-git clone --recursive https://github.com/olavopx/olavopx.github.io.git
-cd olavopx.github.io
+git clone --recursive https://github.com/olavob/olavob.github.io.git
+cd olavob.github.io
 ```
 
 The --recursive flag is important to automatically download the theme submodule.
