@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tutorial on Olavo Bilac&#39;s Blog</title>
-    <link>http://localhost:1313/tags/tutorial/</link>
-    <description>Recent content in Tutorial on Olavo Bilac&#39;s Blog</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Thu, 05 Mar 2026 16:08:42 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)</title>
-      <link>http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/</link>
-      <pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
-      <guid>http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/</guid>
-      <description>&lt;p&gt;Antes de começar o Post irei fazer dois &lt;a href=&#34;https://www.merriam-webster.com/dictionary/rant&#34;&gt;&amp;ldquo;Rants&amp;rdquo;&lt;/a&gt; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que procuram aprender Linux, onde nesse caso obviamente vou dividir e generalizar os iniciantes em geral para simplificar a explicação do argumento, mas deixando claro que não é possível logicamente falar de todo o tipo de pessoas que existe no planeta.&lt;/p&gt;&#xA;&lt;p&gt;Cada indivíduo pode ter sua capacidade e dificuldade físicas e psicológicas para realizar uma determinada tarefa.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Tutorial on Olavo Bilac&#39;s Blog</title>
+		<link>http://localhost:1313/tags/tutorial/</link>
+		<description>Recent content in Tutorial on Olavo Bilac&#39;s Blog</description>
+		<generator>Hugo</generator>
+		<language>pt-br</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 05 Mar 2026 16:08:42 -0300</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)</title>
+				<link>http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/</link>
+				<pubDate>Thu, 05 Mar 2026 16:08:42 -0300</pubDate>
+				<guid>http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/</guid>
+				<description>&lt;h1 id=&#34;introdução-ao-arch-linux&#34;&gt;Introdução ao Arch Linux&lt;/h1&gt;&#xA;&lt;p&gt;Nesse post vou mostrar passo a passo da instalação do &lt;a href=&#34;https://archlinux.org/&#34;&gt;Arch Linux&lt;/a&gt;, levando em consideração que vou seguir o tutorial do &lt;a href=&#34;https://wiki.archlinux.org/title/Main_page&#34;&gt;ArchWIKI&lt;/a&gt; e explicarei algumas armadilhas que um iniciante iria facilmente cair.&lt;/p&gt;&#xA;&lt;p&gt;Para deixar bem claro irei fazer a instalação em uma &lt;a href=&#34;https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual&#34;&gt;Máquina Virtual&lt;/a&gt; no meu caso usarei o &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;Virtual Box&lt;/a&gt;, então irei pular alguns passos da instalação básicas, já que não preciso me preocupar com alguns drivers como as de rede, porque o Virtual Box transfere a rede via Ethernet do meu host no caso o meu Windows 11 para o ambiente isolado.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

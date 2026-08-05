@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Rant on Olavo Bilac&#39;s Blog</title>
-		<link>http://localhost:1313/tags/rant/</link>
-		<description>Recent content in Rant on Olavo Bilac&#39;s Blog</description>
+		<title>Baixo-Nivel on Olavo Bilac&#39;s Blog</title>
+		<link>http://localhost:1313/tags/baixo-nivel/</link>
+		<description>Recent content in Baixo-Nivel on Olavo Bilac&#39;s Blog</description>
 		<generator>Hugo</generator>
 		<language>pt-br</language>
 		
@@ -12,7 +12,7 @@
 		
 			<lastBuildDate>Wed, 05 Aug 2026 20:27:42 -0300</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/rant/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/baixo-nivel/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Rant: O Programador Precisa Aprender Baixo Nivel?</title>
 				<link>http://localhost:1313/posts/2026/08/05/rant-o-programador-precisa-aprender-baixo-nivel/</link>

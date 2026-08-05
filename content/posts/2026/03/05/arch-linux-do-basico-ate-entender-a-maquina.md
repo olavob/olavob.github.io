@@ -3,97 +3,12 @@ date: 2026-03-05T16:08:42-03:00
 draft: false
 title: "Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)"
 type: "post"
-tags: ['archlinux', 'linux', 'aprendizado', 'rant', 'instalação', 'tutorial', 'computer-science', 'sistemas-operacionais', 'devops', 'guia']
+tags: ['archlinux', 'linux', 'aprendizado', 'instalação', 'tutorial', 'computer-science', 'sistemas-operacionais', 'guia']
 layout: default
 comments: true
 ---
 
-Antes de começar o Post irei fazer dois ["Rants"](https://www.merriam-webster.com/dictionary/rant) que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que procuram aprender Linux, onde nesse caso obviamente vou dividir e generalizar os iniciantes em geral para simplificar a explicação do argumento, mas deixando claro que não é possível logicamente falar de todo o tipo de pessoas que existe no planeta. 
-
-Cada indivíduo pode ter sua capacidade e dificuldade físicas e psicológicas para realizar uma determinada tarefa.
-
-# Rant: Todo Iniciante tem a Capacidade de Aprender algo Relativamente Complexo?
-
-Para um iniciante em [Linux](https://pt.wikipedia.org/wiki/Linux) ou qualquer outra atividade que exija prática e raciocínio, costumo pensar que existem dois grupos, o iniciante que sabe o básico de um assunto, seja ele o básico a trivial em programação ou qualquer outra atividade, e o iniciante simplesmente curioso, que acabou de sair de um sistema operacional estático como o Windows ou qualquer outro lugar confortável e seguro onde passou a vida toda e quis aprender algo que achou interessante, seja, nesse caso, aprendendo um novo sistema operacional. 
-
-Existe uma diferença drástica entre os dois grupos.
-
-O primeiro tem a motivação de seguir uma carreira de verdade e se esse cara pelo menos "debugou" alguma função que ele achou particularmente complexa, tendo a lógica de como um computador funciona de verdade, linha por linha, instrução por instrução, byte a byte, esse tipo de iniciante está "anos luz" à frente dos outros.
-
-Ou seja, para o iniciante que teve uma experiência envolvendo essa atividade, ele vai estar naturalmente à frente, e isso é um fato.
-
-Essa diferença é fundamental e não vale apenas a computação em especifico, mas para qualquer tarefa que exija raciocínio e prática. 
-
-É o que faz um grupo desistir e o outro não, mas claro, toda regra tem uma exceção, e o fator que equilibra os dois grupos é a Curiosidade.
-
-A simples curiosidade de fazer uma pergunta pra si mesmo ou para o outro é uma [prática de aprendizado eficaz](https://tilt.colostate.edu/the-socratic-method/), essa pessoa nem precisa ter a capacidade de resolver sua dúvida ou crise, mas ela apenas dando opinião, fortalece a sua própria visão analítica dos fatos. 
-
-A curiosidade de procurar novas informações e de se perguntar o que está errando é o que define, quem desiste fácil mesmo tendo todo o potencial do mundo, de quem fica, aprende e persiste mesmo com toda a dor de aprender.
-
-E é isso que significa aprender uma [distribuição](https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_Linux) como o Arch Linux, é preciso fuçar a wiki. Ser curioso.
-
-# Rant: O Programador Realmente precisa aprender Linux?
-
-Essa pergunta é fácil de responder, um motorista precisa aprender mecânica? a resposta é não. Mas isso tornaria ele melhor no que faz? aí a resposta muda completamente... 
-
-No mesmo sentido em que o motorista possa ser o melhor piloto do mundo, se o carro quebrar quem ele chama? um mecânico. Agora o programador pode ser o melhor especialista em linguagem de programação X do mundo, se o sistema remoto da empresa der pau, quem ele chama? a mãe? o chefe, que vai descobrir sua incompetência? o time de produto e marketing que não faz a mínima ideia do que ele está falando? ou o outro programador que vai saber resolver esse problema, e logo vai ganhar mais destaque e aumento? Esse cenário pode parecer fictício mas pode ocorrer em empresas pequenas, que apenas contém 1 programador ou um time de 3 ou 4 no máximo, essas empresas são a base da escada, é o primeiro emprego de todo programador iniciante, Em empresas grandes existem profissionais especializados nisso, chamados de DevOps, mas essa não é a realidade de muitos ambientes de trabalho.
-
-O verdadeiro prejuízo está na capacidade de resolver problemas e de criar soluções próprias. 
-
-Quando digo "especialista em linguagem X" como Python, Javascript, C++ ou até Java, não quero dizer que ele seja bom especificamente por isso, até uma criança pode digitar código, uma IA consegue, sua tia consegue, uma Linguagem de Programação é útil mas é apenas uma ferramenta, é um jeito de enviar instruções a um computador e ponto. 
-
-Um programador que fica apenas digitando código de [alto nível](https://www.dio.me/articles/linguagens-de-programacao-de-alto-e-baixo-nivel), ficando apenas no Windows e não sabe matemática, está limitando a sua carreira. Por que se limitar tão cedo estando no início dela?
-
-Lógica de programação é necessária mas não chega nem a ser o básico do básico, é apenas o essencial, é como aprender a ler sem saber escrever. Por isso não incentivo o uso da PseudoLinguagem como o [Portugol](https://pt.wikipedia.org/wiki/Portugol) aprender lógica é trivial, e não faz sentido dar a um iniciante uma ferramenta que é apenas para isso, e que pode acostumá-lo com vícios como os de [Más Práticas de Programação](https://pt.wikipedia.org/wiki/Boas_pr%C3%A1ticas_de_programa%C3%A7%C3%A3o), já que não é uma linguagem de verdade, pode ser considerada uma perda de tempo completa.
-
-Salvo engano apenas as pessoas que realmente têm uma Dificuldade em raciocínio e lógica, para isso o Portugol pode ser um ótimo ponto de partida.
-
-O simples fato de estudar Linux e  [Linguagens de baixo nível](https://minutodaseguranca.blog.br/importancia-da-linguem-de-programacao-de-baixo-nivel/), é para ajudar no desenvolvimento da capacidade cognitiva e na melhoria expressiva da qualidade do código feito. Ajudar o desenvolvedor a ter um outro campo de visão a pensar fora da caixa. Um programador que fica apenas no superficial não tem segurança e otimização, não tem noção de que o Python ou o Javascript dele esteja consumindo 150% a mais do que deveria de memória e performance, coisas que em [Escalabilidade Vertical](https://aerospike.com/blog/vertical-vs-horizontal-scaling/) de um [Deploy](https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/) custa dinheiro e pode dar prejuízo em dívidas.
-
-Em um Linux ou sistemas mais complexos você é obrigado a pensar em uma coisa muito chata chamada de Escalabilidade, recurso não é infinito é finito e custa $.
-
-Um exemplo: vamos criar um arquivo de qualquer linguagem mesmo, mas primeiro vamos para a pasta temporária do Linux para não poluir os diretórios: ```cd /tmp``` onde o comando `cd` significa: Change Directory.
-
-Uma vez lá dentro vamos "tocar" ou criar um arquivo: `touch teste.rb` e vamos abrir e uma IDE ou um editor via CLI que significa interface em linha de comando, aqui vou utilizar o VIM, `vim teste.rb`. 
-
-vou agora escrever uma função trivial em Ruby de "hello world".
-
-```ruby
-
-def teste
-    puts "hello world"
-end
-
-teste
-```
-
-Para uma pessoa que apenas ficou no superficial isso basta, é realmente algo super simples, porém sua visão sobre esse código continua limitada por mais simples que ele seja.
-
-Agora salvamos e saímos com `:wq!` uma vez fora do editor e dentro do nosso diretório, executaremos `xxd -g1 arquivo` com a saída disso, temos algo mais complexo. 
-
-![](https://i.ibb.co/QjY4H60b/Captura-de-tela-2026-03-03-022733.png)
-
-Uma mudança radical no campo de visão do programador, agora é o mesmo código mas representado em [Hexadecimal](https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal), o mais próximo de como seria em uma [escovação de bit](https://pt.stackoverflow.com/questions/92755/de-onde-vem-a-express%C3%A3o-escovar-bits-e-qual-o-equivalente-em-ingl%C3%AAs). Na esquerda contendo o Offset em Bytes, ou seja a posição em Bytes do conteúdo do arquivo, de 0...0 até 0...10 é 16 Bytes, em exa 16 = 10.
-
-Na direita as letras são representadas também em Hexadecimal, se observar bem, veremos o  conteúdo original do arquivo: 65 em exa é a letra "e" no meu código, tendo cada caractere 1 Byte. 
-
-Agora executando `xxd -b arquivo` veremos tudo em Binário. 
-
-![](https://i.ibb.co/B8k0PdW/Captura-de-tela-2026-03-03-025556.png)
-
-Tendo cada caractere representado por um Byte, cada Byte contendo 8 Bits. 
-
-Essa série de comandos que exemplifiquei é uma forma de enxergar o código bem simples mas com outros olhos, não em uma camada tão superficial como apenas a sintaxe funcional e o resto "mágica", mas sim que a sintaxe vira caracteres, encode, bytes e bits. porém não se empolgue, isso é apenas a Pré-introdução de Programação de baixo nível. Para saber mais recomendo assistir esse [vídeo do Fabio Akita](https://www.youtube.com/watch?v=Gp2m8ZuXoPg).
-
 # Introdução ao Arch Linux
-
-Depois desse longo RANT, vimos que um iniciante pode ser capaz de aprender Arch, apenas tendo a curiosidade de pesquisar e de perguntar para si mesmo o porquê de algo acontecer.
-
-Logo após expliquei a importância para o programador conhecer sua própria máquina, o programador tem que dominar a máquina, não a máquina dominar o programador. 
-
-E finalizando a reflexão, dei um exemplo de como o campo de visão do desenvolvedor pode aumentar apenas saindo da sua zona de conforto, o alto nível é fácil e prático, nenhum programador precisa de fato sair dele no seu dia a dia de trabalho, porém isso limita tanto sua carreira e potencial de ganho quanto sua habilidade de obter a melhor solução com mais eficiência e economia.     
-
-Agora vamos começar o post de verdade. 
 
 Nesse post vou mostrar passo a passo da instalação do [Arch Linux](https://archlinux.org/), levando em consideração que vou seguir o tutorial do [ArchWIKI](https://wiki.archlinux.org/title/Main_page) e explicarei algumas armadilhas que um iniciante iria facilmente cair. 
 
@@ -131,7 +46,7 @@ Assim que configurar a Máquina virtual e começar o processo de inicialização
 
 Selecionaremos a primeira opção pois estamos usando uma imagem ISO e não uma imagem NETBOOT.
 
-Na primeira opção temos a palavra: x86_64 pois essa é a arquitetura do meu processador, que pode variar dependendo do seu hardware, se o seu processador for de 32 Bits que seria o i386, você deverá instalar uma ISO própria para ela na página de download.
+Na primeira opção temos a palavra: x86_64 pois essa é a arquitetura do meu processador, que pode variar dependendo do seu hardware, ~~se o seu processador for de 32 Bits que seria o i386, você deverá instalar uma ISO própria para ela na página de download~~(informação marcada como histórica, Arch Linux não suporta mais 32 bits (i386/i686) desde o final de 2017).
 
 ![](https://i.ibb.co/ZzPRpdyY/Captura-de-tela-2026-03-03-203923.png)
 
@@ -293,7 +208,7 @@ Para saber qual Linguagem de comando seu terminal usa, execute:
 echo $SHELL
 ```
 
-## Arch Linux: Seguindo o Coelho na Cartola e Chegando na Mulher de vermelho da Matrix
+## Arch Linux: Agora é onde a mãe chora e o filho não vê
 
 ![](https://i.ibb.co/Pb3rk0F/Untitled-2026-02-27-0120.png)
 
@@ -372,7 +287,7 @@ Com isso vamos particionar o disco e criar um volume nessa partição. O que é 
 Então vamos particionar o nosso disco, e formatar para ser um volume. Para isso vamos usar o comando ``fdisk``. 
 
 ```
-fdisk _/dev/o_disco_a_ser_particionado_
+fdisk /dev/SEUDISCO
 ```
 
 Deixando claro que apenas farei a partição do sistema ``EFI``, uma de ``SWAP`` e outra do diretório raiz `/`, que é apenas o necessário.
@@ -498,6 +413,8 @@ Para usuários como eu que instalaram pelo VirtualBox, recomendo o pacote `virtu
 pacstrap -K /mnt base linux linux-firmware vim sudo amd-ucode networkmanager virtualbox-guest-utils
 ```
 
+Se sentir lentidão no download, vide [Mirrors](https://wiki.archlinux.org/title/Mirrors_(Portugu%C3%AAs)) para localizar sua região geográfica e alterar caso precise, mirrors são copias exatas dos repositórios de software hospedadas para downloads e para evitar sobrecarga em um único servidor central, onde fica o original, ele é distribuido geograficamente. 
+
 ## Configurando o Sistema
 
 Agora estamos preparados para definir com o `chroot` o  diretório filho `/mnt` como raiz. Antes vamos gerar um arquivo `fstab` para salvar o ponto de montagem e incluir no Systemd durante a inicialização para automatizar os comando de montagem.
@@ -573,13 +490,13 @@ pacman -S grub efibootmgr
 Agora para instalar o aplicativo EFi do GRUB em `/mnt/boot/EFI/GRUB` e seus módulos para `/boot/grub/x86_64-efi/` execute o comando:
 
 ```
-grub-install --target=x86_64-efi --efi-directory=/mnt/boot --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 ```
 
 Se por algum motivo for necessário executar esse comando no ambiente live, fora do sistema instalado, execute isso: 
 
 ```
-grub-install --target=x86_64-efi --efi-directory=/mnt/boot/ --bootloader-id=GRUB --boot-directory=/mnt/boot
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --boot-directory=/boot
 ```
 
 A opção `--boot-directory=` deve conter o caminho para o `/boot`

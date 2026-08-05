@@ -19,19 +19,19 @@
 
     
     <title>Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)</title>
-    <meta name="description" content="Antes de começar o Post irei fazer dois &ldquo;Rants&rdquo; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que …">
-    <meta name="keywords" content='blog, gokarna, hugo, programador, olavopx, Olavo Bilac, ações, bolsa de valores, B3, developer, ArchLinux, linux, archlinux, aprendizado, rant, instalação, tutorial, computer-science, sistemas-operacionais, devops, guia'>
+    <meta name="description" content="Introdução ao Arch Linux Nesse post vou mostrar passo a passo da instalação do Arch Linux, levando em consideração que vou seguir o tutorial do ArchWIKI e …">
+    <meta name="keywords" content='blog, gokarna, hugo, programador, olavopx, Olavo Bilac, ações, bolsa de valores, B3, developer, ArchLinux, linux, archlinux, aprendizado, instalação, tutorial, computer-science, sistemas-operacionais, guia'>
 
     <meta property="og:url" content="http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)">
-    <meta property="og:description" content="Antes de começar o Post irei fazer dois &ldquo;Rants&rdquo; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que …">
+    <meta property="og:description" content="Introdução ao Arch Linux Nesse post vou mostrar passo a passo da instalação do Arch Linux, levando em consideração que vou seguir o tutorial do ArchWIKI e …">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
     <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)">
-    <meta name="twitter:description" content="Antes de começar o Post irei fazer dois &ldquo;Rants&rdquo; que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que …">
+    <meta name="twitter:description" content="Introdução ao Arch Linux Nesse post vou mostrar passo a passo da instalação do Arch Linux, levando em consideração que vou seguir o tutorial do ArchWIKI e …">
     <meta property="twitter:domain" content="http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/">
     <meta property="twitter:url" content="http://localhost:1313/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina/">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/137653930?s=400&amp;u=743cfe951a0ede3c5e76bc0197fbcdd7d833ee5c&amp;v=4">
@@ -178,10 +178,6 @@
            
          
            
-             <li class="post-tag"><a href="http://localhost:1313/tags/rant">rant</a></li>
-           
-         
-           
              <li class="post-tag"><a href="http://localhost:1313/tags/instala%C3%A7%C3%A3o">instalação</a></li>
            
          
@@ -198,10 +194,6 @@
            
          
            
-             <li class="post-tag"><a href="http://localhost:1313/tags/devops">devops</a></li>
-           
-         
-           
              <li class="post-tag"><a href="http://localhost:1313/tags/guia">guia</a></li>
            
          
@@ -209,51 +201,7 @@
     </div>
 
     <div class="post-content">
-        <p>Antes de começar o Post irei fazer dois <a href="https://www.merriam-webster.com/dictionary/rant">&ldquo;Rants&rdquo;</a> que vejo que são necessários para complementar o ponto de vista de dois tipos de iniciantes que procuram aprender Linux, onde nesse caso obviamente vou dividir e generalizar os iniciantes em geral para simplificar a explicação do argumento, mas deixando claro que não é possível logicamente falar de todo o tipo de pessoas que existe no planeta.</p>
-<p>Cada indivíduo pode ter sua capacidade e dificuldade físicas e psicológicas para realizar uma determinada tarefa.</p>
-<h1 id="rant-todo-iniciante-tem-a-capacidade-de-aprender-algo-relativamente-complexo">Rant: Todo Iniciante tem a Capacidade de Aprender algo Relativamente Complexo?</h1>
-<p>Para um iniciante em <a href="https://pt.wikipedia.org/wiki/Linux">Linux</a> ou qualquer outra atividade que exija prática e raciocínio, costumo pensar que existem dois grupos, o iniciante que sabe o básico de um assunto, seja ele o básico a trivial em programação ou qualquer outra atividade, e o iniciante simplesmente curioso, que acabou de sair de um sistema operacional estático como o Windows ou qualquer outro lugar confortável e seguro onde passou a vida toda e quis aprender algo que achou interessante, seja, nesse caso, aprendendo um novo sistema operacional.</p>
-<p>Existe uma diferença drástica entre os dois grupos.</p>
-<p>O primeiro tem a motivação de seguir uma carreira de verdade e se esse cara pelo menos &ldquo;debugou&rdquo; alguma função que ele achou particularmente complexa, tendo a lógica de como um computador funciona de verdade, linha por linha, instrução por instrução, byte a byte, esse tipo de iniciante está &ldquo;anos luz&rdquo; à frente dos outros.</p>
-<p>Ou seja, para o iniciante que teve uma experiência envolvendo essa atividade, ele vai estar naturalmente à frente, e isso é um fato.</p>
-<p>Essa diferença é fundamental e não vale apenas a computação em especifico, mas para qualquer tarefa que exija raciocínio e prática.</p>
-<p>É o que faz um grupo desistir e o outro não, mas claro, toda regra tem uma exceção, e o fator que equilibra os dois grupos é a Curiosidade.</p>
-<p>A simples curiosidade de fazer uma pergunta pra si mesmo ou para o outro é uma <a href="https://tilt.colostate.edu/the-socratic-method/">prática de aprendizado eficaz</a>, essa pessoa nem precisa ter a capacidade de resolver sua dúvida ou crise, mas ela apenas dando opinião, fortalece a sua própria visão analítica dos fatos.</p>
-<p>A curiosidade de procurar novas informações e de se perguntar o que está errando é o que define, quem desiste fácil mesmo tendo todo o potencial do mundo, de quem fica, aprende e persiste mesmo com toda a dor de aprender.</p>
-<p>E é isso que significa aprender uma <a href="https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_Linux">distribuição</a> como o Arch Linux, é preciso fuçar a wiki. Ser curioso.</p>
-<h1 id="rant-o-programador-realmente-precisa-aprender-linux">Rant: O Programador Realmente precisa aprender Linux?</h1>
-<p>Essa pergunta é fácil de responder, um motorista precisa aprender mecânica? a resposta é não. Mas isso tornaria ele melhor no que faz? aí a resposta muda completamente&hellip;</p>
-<p>No mesmo sentido em que o motorista possa ser o melhor piloto do mundo, se o carro quebrar quem ele chama? um mecânico. Agora o programador pode ser o melhor especialista em linguagem de programação X do mundo, se o sistema remoto da empresa der pau, quem ele chama? a mãe? o chefe, que vai descobrir sua incompetência? o time de produto e marketing que não faz a mínima ideia do que ele está falando? ou o outro programador que vai saber resolver esse problema, e logo vai ganhar mais destaque e aumento? Esse cenário pode parecer fictício mas pode ocorrer em empresas pequenas, que apenas contém 1 programador ou um time de 3 ou 4 no máximo, essas empresas são a base da escada, é o primeiro emprego de todo programador iniciante, Em empresas grandes existem profissionais especializados nisso, chamados de DevOps, mas essa não é a realidade de muitos ambientes de trabalho.</p>
-<p>O verdadeiro prejuízo está na capacidade de resolver problemas e de criar soluções próprias.</p>
-<p>Quando digo &ldquo;especialista em linguagem X&rdquo; como Python, Javascript, C++ ou até Java, não quero dizer que ele seja bom especificamente por isso, até uma criança pode digitar código, uma IA consegue, sua tia consegue, uma Linguagem de Programação é útil mas é apenas uma ferramenta, é um jeito de enviar instruções a um computador e ponto.</p>
-<p>Um programador que fica apenas digitando código de <a href="https://www.dio.me/articles/linguagens-de-programacao-de-alto-e-baixo-nivel">alto nível</a>, ficando apenas no Windows e não sabe matemática, está limitando a sua carreira. Por que se limitar tão cedo estando no início dela?</p>
-<p>Lógica de programação é necessária mas não chega nem a ser o básico do básico, é apenas o essencial, é como aprender a ler sem saber escrever. Por isso não incentivo o uso da PseudoLinguagem como o <a href="https://pt.wikipedia.org/wiki/Portugol">Portugol</a> aprender lógica é trivial, e não faz sentido dar a um iniciante uma ferramenta que é apenas para isso, e que pode acostumá-lo com vícios como os de <a href="https://pt.wikipedia.org/wiki/Boas_pr%C3%A1ticas_de_programa%C3%A7%C3%A3o">Más Práticas de Programação</a>, já que não é uma linguagem de verdade, pode ser considerada uma perda de tempo completa.</p>
-<p>Salvo engano apenas as pessoas que realmente têm uma Dificuldade em raciocínio e lógica, para isso o Portugol pode ser um ótimo ponto de partida.</p>
-<p>O simples fato de estudar Linux e  <a href="https://minutodaseguranca.blog.br/importancia-da-linguem-de-programacao-de-baixo-nivel/">Linguagens de baixo nível</a>, é para ajudar no desenvolvimento da capacidade cognitiva e na melhoria expressiva da qualidade do código feito. Ajudar o desenvolvedor a ter um outro campo de visão a pensar fora da caixa. Um programador que fica apenas no superficial não tem segurança e otimização, não tem noção de que o Python ou o Javascript dele esteja consumindo 150% a mais do que deveria de memória e performance, coisas que em <a href="https://aerospike.com/blog/vertical-vs-horizontal-scaling/">Escalabilidade Vertical</a> de um <a href="https://olavodotpy.github.io/posts/2024/12/17/colocando-em-producao-um-projeto-django-fazendo-deploy-no-railway/">Deploy</a> custa dinheiro e pode dar prejuízo em dívidas.</p>
-<p>Em um Linux ou sistemas mais complexos você é obrigado a pensar em uma coisa muito chata chamada de Escalabilidade, recurso não é infinito é finito e custa $.</p>
-<p>Um exemplo: vamos criar um arquivo de qualquer linguagem mesmo, mas primeiro vamos para a pasta temporária do Linux para não poluir os diretórios: <code>cd /tmp</code> onde o comando <code>cd</code> significa: Change Directory.</p>
-<p>Uma vez lá dentro vamos &ldquo;tocar&rdquo; ou criar um arquivo: <code>touch teste.rb</code> e vamos abrir e uma IDE ou um editor via CLI que significa interface em linha de comando, aqui vou utilizar o VIM, <code>vim teste.rb</code>.</p>
-<p>vou agora escrever uma função trivial em Ruby de &ldquo;hello world&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">teste</span>
-</span></span><span style="display:flex;"><span>    puts <span style="color:#e6db74">&#34;hello world&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>teste
-</span></span></code></pre></div><p>Para uma pessoa que apenas ficou no superficial isso basta, é realmente algo super simples, porém sua visão sobre esse código continua limitada por mais simples que ele seja.</p>
-<p>Agora salvamos e saímos com <code>:wq!</code> uma vez fora do editor e dentro do nosso diretório, executaremos <code>xxd -g1 arquivo</code> com a saída disso, temos algo mais complexo.</p>
-<p><img src="https://i.ibb.co/QjY4H60b/Captura-de-tela-2026-03-03-022733.png" alt=""></p>
-<p>Uma mudança radical no campo de visão do programador, agora é o mesmo código mas representado em <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal">Hexadecimal</a>, o mais próximo de como seria em uma <a href="https://pt.stackoverflow.com/questions/92755/de-onde-vem-a-express%C3%A3o-escovar-bits-e-qual-o-equivalente-em-ingl%C3%AAs">escovação de bit</a>. Na esquerda contendo o Offset em Bytes, ou seja a posição em Bytes do conteúdo do arquivo, de 0&hellip;0 até 0&hellip;10 é 16 Bytes, em exa 16 = 10.</p>
-<p>Na direita as letras são representadas também em Hexadecimal, se observar bem, veremos o  conteúdo original do arquivo: 65 em exa é a letra &ldquo;e&rdquo; no meu código, tendo cada caractere 1 Byte.</p>
-<p>Agora executando <code>xxd -b arquivo</code> veremos tudo em Binário.</p>
-<p><img src="https://i.ibb.co/B8k0PdW/Captura-de-tela-2026-03-03-025556.png" alt=""></p>
-<p>Tendo cada caractere representado por um Byte, cada Byte contendo 8 Bits.</p>
-<p>Essa série de comandos que exemplifiquei é uma forma de enxergar o código bem simples mas com outros olhos, não em uma camada tão superficial como apenas a sintaxe funcional e o resto &ldquo;mágica&rdquo;, mas sim que a sintaxe vira caracteres, encode, bytes e bits. porém não se empolgue, isso é apenas a Pré-introdução de Programação de baixo nível. Para saber mais recomendo assistir esse <a href="https://www.youtube.com/watch?v=Gp2m8ZuXoPg">vídeo do Fabio Akita</a>.</p>
-<h1 id="introdução-ao-arch-linux">Introdução ao Arch Linux</h1>
-<p>Depois desse longo RANT, vimos que um iniciante pode ser capaz de aprender Arch, apenas tendo a curiosidade de pesquisar e de perguntar para si mesmo o porquê de algo acontecer.</p>
-<p>Logo após expliquei a importância para o programador conhecer sua própria máquina, o programador tem que dominar a máquina, não a máquina dominar o programador.</p>
-<p>E finalizando a reflexão, dei um exemplo de como o campo de visão do desenvolvedor pode aumentar apenas saindo da sua zona de conforto, o alto nível é fácil e prático, nenhum programador precisa de fato sair dele no seu dia a dia de trabalho, porém isso limita tanto sua carreira e potencial de ganho quanto sua habilidade de obter a melhor solução com mais eficiência e economia.</p>
-<p>Agora vamos começar o post de verdade.</p>
+        <h1 id="introdução-ao-arch-linux">Introdução ao Arch Linux</h1>
 <p>Nesse post vou mostrar passo a passo da instalação do <a href="https://archlinux.org/">Arch Linux</a>, levando em consideração que vou seguir o tutorial do <a href="https://wiki.archlinux.org/title/Main_page">ArchWIKI</a> e explicarei algumas armadilhas que um iniciante iria facilmente cair.</p>
 <p>Para deixar bem claro irei fazer a instalação em uma <a href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual">Máquina Virtual</a> no meu caso usarei o <a href="https://www.virtualbox.org/">Virtual Box</a>, então irei pular alguns passos da instalação básicas, já que não preciso me preocupar com alguns drivers como as de rede, porque o Virtual Box transfere a rede via Ethernet do meu host no caso o meu Windows 11 para o ambiente isolado.</p>
 <h2 id="pré-instalação---instalando-a-iso-executando-os-primeiros-comandos">Pré-Instalação - Instalando a ISO, Executando os Primeiros Comandos</h2>
@@ -272,7 +220,7 @@
 <p>Assim que configurar a Máquina virtual e começar o processo de inicialização da ISO, vai aparecer a seguinte tela</p>
 <p><img src="https://i.ibb.co/3mQbMWD1/Captura-de-tela-2026-03-03-222050.png" alt=""></p>
 <p>Selecionaremos a primeira opção pois estamos usando uma imagem ISO e não uma imagem NETBOOT.</p>
-<p>Na primeira opção temos a palavra: x86_64 pois essa é a arquitetura do meu processador, que pode variar dependendo do seu hardware, se o seu processador for de 32 Bits que seria o i386, você deverá instalar uma ISO própria para ela na página de download.</p>
+<p>Na primeira opção temos a palavra: x86_64 pois essa é a arquitetura do meu processador, que pode variar dependendo do seu hardware, <del>se o seu processador for de 32 Bits que seria o i386, você deverá instalar uma ISO própria para ela na página de download</del>(informação marcada como histórica, Arch Linux não suporta mais 32 bits (i386/i686) desde o final de 2017).</p>
 <p><img src="https://i.ibb.co/ZzPRpdyY/Captura-de-tela-2026-03-03-203923.png" alt=""></p>
 <p>Agora que selecionamos a primeira opção essa é a nossa próxima tela, e leia atentamente, estamos logados no usuário <code>root</code> chamado de <code>archiso</code> e seguindo temos os comandos para conexão de Wi-Fi no <a href="https://wiki.archlinux.org/title/Iwd_(Portugu%C3%AAs)#iwctl">terminal <code>iwctl</code></a> e também para Modem, e no final a mensagem pede para se conectar a internet para o guia online de instalação.</p>
 <p>Muito bem, é aqui que muito iniciante simplesmente PARA.</p>
@@ -392,7 +340,7 @@ wget URL
 <p>O shell mais comum é o <a href="https://pt.wikipedia.org/wiki/Bash">BASH</a>, porém existem outros como ZSH, SH, Korn Shell, C Shell e Bourne Shell.</p>
 <p>Para saber qual Linguagem de comando seu terminal usa, execute:</p>
 <pre tabindex="0"><code>echo $SHELL
-</code></pre><h2 id="arch-linux-seguindo-o-coelho-na-cartola-e-chegando-na-mulher-de-vermelho-da-matrix">Arch Linux: Seguindo o Coelho na Cartola e Chegando na Mulher de vermelho da Matrix</h2>
+</code></pre><h2 id="arch-linux-agora-é-onde-a-mãe-chora-e-o-filho-não-vê">Arch Linux: Agora é onde a mãe chora e o filho não vê</h2>
 <p><img src="https://i.ibb.co/Pb3rk0F/Untitled-2026-02-27-0120.png" alt=""></p>
 <p>Esse slide eu mesmo criei no <a href="https://excalidraw.com/">Excalidraw</a> e é uma forma de representar visualmente o processo de instalação do Arch no Ambiente Live/Live CD, pode parecer complicado, mas se dividirmos em partes dá para entender, por isso vou explicar com calma cada ponto, e depois falarei do fluxo e como vamos juntar cada um deles para fazer a instalação.</p>
 <h3 id="ambientes-live-ou-livecd">Ambientes Live ou LiveCD</h3>
@@ -430,7 +378,7 @@ wget URL
 </code></pre><p>Se o disco SATA ou NVMe não aparecer consulte: <a href="https://wiki.archlinux.org/title/Partitioning_(Portugu%C3%AAs)#Unidades_n%C3%A3o_ficam_vis%C3%ADveis_quando_o_RAID_do_firmware_est%C3%A1_habilitado">Este Guia</a></p>
 <p>Com isso vamos particionar o disco e criar um volume nessa partição. O que é volume? volume é quando a partição sai do meio físico de ser apenas um espaço do HD e passa a ter um único sistema de arquivo, contendo a interface lógica do sistema operacional, por isso volume pode ser chamado também de unidade lógica.</p>
 <p>Então vamos particionar o nosso disco, e formatar para ser um volume. Para isso vamos usar o comando <code>fdisk</code>.</p>
-<pre tabindex="0"><code>fdisk _/dev/o_disco_a_ser_particionado_
+<pre tabindex="0"><code>fdisk /dev/SEUDISCO
 </code></pre><p>Deixando claro que apenas farei a partição do sistema <code>EFI</code>, uma de <code>SWAP</code> e outra do diretório raiz <code>/</code>, que é apenas o necessário.</p>
 <p>Para saber mais sobre o <a href="https://guialinux.uniriotec.br/fdisk/#:~:text=Algumas%20op%C3%A7%C3%B5es%20do%20comando&amp;text=S%C3%A3o%20valores%20v%C3%A1lidos%3A%20512%2C%201024,nas%20vers%C3%B5es%20antigas%20do%20kernel.">fdisk</a> ou</p>
 <pre tabindex="0"><code>pacman -S man 
@@ -499,7 +447,8 @@ w                # Salva e sai
 <p>Já que sairemos do ambiente live, também teremos que instalar o pacote daemon <code>NetworkManager</code> para quando chegarmos dentro do nosso sistema novo estivermos conexão com WI-Fi.</p>
 <p>Para usuários como eu que instalaram pelo VirtualBox, recomendo o pacote <code>virtualbox-guest-utils</code> para evitar bugs com drivers, como os de display, teclado e mouse.</p>
 <pre tabindex="0"><code>pacstrap -K /mnt base linux linux-firmware vim sudo amd-ucode networkmanager virtualbox-guest-utils
-</code></pre><h2 id="configurando-o-sistema">Configurando o Sistema</h2>
+</code></pre><p>Se sentir lentidão no download, vide <a href="https://wiki.archlinux.org/title/Mirrors_(Portugu%C3%AAs)">Mirrors</a> para localizar sua região geográfica e alterar caso precise, mirrors são copias exatas dos repositórios de software hospedadas para downloads e para evitar sobrecarga em um único servidor central, onde fica o original, ele é distribuido geograficamente.</p>
+<h2 id="configurando-o-sistema">Configurando o Sistema</h2>
 <p>Agora estamos preparados para definir com o <code>chroot</code> o  diretório filho <code>/mnt</code> como raiz. Antes vamos gerar um arquivo <code>fstab</code> para salvar o ponto de montagem e incluir no Systemd durante a inicialização para automatizar os comando de montagem.</p>
 <pre tabindex="0"><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 </code></pre><p>Para confirmar abra o arquivo <code>/mnt/etc/fstab</code> e edite-o caso haja erros.</p>
@@ -527,9 +476,9 @@ w                # Salva e sai
 <p>Agora vamos instalar o famoso GRUB. Dentro do chroot instale os pacotes <code>grub</code> e <code>efibootmgr</code>.</p>
 <pre tabindex="0"><code>pacman -S grub efibootmgr
 </code></pre><p>Agora para instalar o aplicativo EFi do GRUB em <code>/mnt/boot/EFI/GRUB</code> e seus módulos para <code>/boot/grub/x86_64-efi/</code> execute o comando:</p>
-<pre tabindex="0"><code>grub-install --target=x86_64-efi --efi-directory=/mnt/boot --bootloader-id=GRUB
+<pre tabindex="0"><code>grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 </code></pre><p>Se por algum motivo for necessário executar esse comando no ambiente live, fora do sistema instalado, execute isso:</p>
-<pre tabindex="0"><code>grub-install --target=x86_64-efi --efi-directory=/mnt/boot/ --bootloader-id=GRUB --boot-directory=/mnt/boot
+<pre tabindex="0"><code>grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --boot-directory=/boot
 </code></pre><p>A opção <code>--boot-directory=</code> deve conter o caminho para o <code>/boot</code></p>
 <p>Após a instalação do GRUB o seu diretório principal estará em <code>/boot/grub/</code>.</p>
 <p>O último passo é gerar o arquivo de configuração principal:</p>
@@ -600,8 +549,9 @@ passwd seunome
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
         </div>
         
     </div>
