@@ -36,7 +36,7 @@ enableRobotsTXT = true
 
   numberPostsOnHomePage = 10
   showPostsOnHomePage = "recent"
-  fontSize = "1rem"
+  fontSize = "1.3rem"
 
   showBackToTopButton = true
 

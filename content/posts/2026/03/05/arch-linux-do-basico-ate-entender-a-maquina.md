@@ -611,6 +611,6 @@ Com isso entramos no ambiente do Gnome.
 
 Fizemos a instalação completa do Arch Linux, do kernel e as partições até o ambiente gráfico. Existem muitas coisas para fazer dentro do sistema já pronto, como a personalização para deixar as coisas ainda mais bonitas, colocar ``themes`` e ``icons`` no Gnome e o pacote de configuração do [Power Level 10k](https://hashir.blog/assets/final-starship-catppuccin.zPCjMxUN_2c1PrT.webp) no emulador de terminal. 
 
-Além de um ecossistema de trabalho para programador com ferramenta como Git, ``asdf``, Docker, LazyVim, Banco de dados e ZSH, tudo integrado via terminal, mas isso é assunto para outro post.
+Além de um ecossistema de trabalho para programador com ferramenta como Git, ASDF, Docker, LazyVim, Banco de dados e ZSH, tudo integrado via terminal, mas isso é assunto para outro post.
 
 ---------------------------------------------------------------------------------------

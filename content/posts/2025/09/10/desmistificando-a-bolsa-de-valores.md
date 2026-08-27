@@ -52,7 +52,7 @@ Quando o investidor compra uma ação no mercado, torna-se oficialmente sócio e
 
 Quando mais ações se têm de uma empresa, mais próximo está de adquirir ela para si, a sua posição nessa empresa é medida em porcentagem, o investidor que mais tem é chamado de controlador principal. Segue essa imagem da composição acionária da Klabin Papel e Celulose:
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd_Sur3U1i6GGjxbBdOPzBtqgTGsRgi5_AzFj0IrDVGGYMiRtSJiYY7_TTUperqZnzqdkZEyDjad4tTwbIxOPRoB9r22eopLe6IPjaXxnzL_o1kflG8KBtK5AcGvcp4DmN721y-nQ?key=qrkIAn4q5jK3M4e8XOj0orJc)
+![imagem](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd_Sur3U1i6GGjxbBdOPzBtqgTGsRgi5_AzFj0IrDVGGYMiRtSJiYY7_TTUperqZnzqdkZEyDjad4tTwbIxOPRoB9r22eopLe6IPjaXxnzL_o1kflG8KBtK5AcGvcp4DmN721y-nQ?key=qrkIAn4q5jK3M4e8XOj0orJc)
 
 Percebe-se que todas as posições estão sendo medidas em porcentagem, além disso pode parecer bastante confuso mas vamos separar e organizar. começaremos pela primeira fileira a Klabin irmãos S.A. que é o controlador principal contendo 52,23% das ações Ordinárias(ON) que é o ticker que contém o sufixo 3.
 
