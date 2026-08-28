@@ -46,6 +46,9 @@ params:
   footer:
     displayCopyright: true
     displayPoweredBy: true
+    copyright: "© 2026 Olavo Bilac. Todos os direitos reservados."
+
+
 
   editURL:
     enable: false

@@ -1,6 +1,6 @@
 # Personal Blog
 
-Static blog built with **Hugo** using the [goKarna-hugo](https://github.com/olavob/gokarna-hugo) theme (maintained fork).
+Static blog built with **Hugo** using the [Hextra](https://github.com/imfing/hextra) theme (via git submodule).
 
 Visit the blog: https://olavob.github.io
 
@@ -9,8 +9,8 @@ Visit the blog: https://olavob.github.io
 <!-- Hugo -->
 <img src="https://img.shields.io/badge/Hugo-Static%20Site%20Generator-blue?logo=hugo" alt="Hugo">
 
-<!-- goKarna Theme -->
-<img src="https://img.shields.io/badge/Theme-goKarna--hugo-black?logo=github" alt="goKarna Theme">
+<!-- Hextra Theme -->
+<img src="https://img.shields.io/badge/Theme-Hextra-black?logo=github" alt="Hextra Theme">
 
 <!-- Go -->
 <img src="https://img.shields.io/badge/Go-Programming%20Language-00ADD8?logo=go&logoColor=white" alt="Go">
@@ -46,27 +46,37 @@ cd olavob.github.io
 The --recursive flag is important to automatically download the theme submodule.
 If you already cloned without --recursive, run:
 
-```Bash
+```bash
 git submodule update --init --recursive
+```
+
+To update the theme to its latest version later:
+
+```bash
+git submodule update --remote themes/hextra
 ```
 
 ### 3. Start the development server
 
-```Bash
+```bash
 hugo server -D
 ```
 
 The blog will be available at: http://localhost:1313
 The -D flag includes draft posts (draft: true)
 
+**Note:** Disqus comments don't load during local preview (`hugo server`) by design — they only render on a real production build.
+
 ### 4. Build for production
 
-```Bash
+```bash
 hugo
 ```
 
 The generated files will be in the public/ folder.
-License
+
+## License
+
 This work is licensed under the
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
 
@@ -79,5 +89,3 @@ Do not use it for commercial purposes
 Distribute your modifications under the same license
 
 See the full license: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-Made with ❤️ using Hugo.

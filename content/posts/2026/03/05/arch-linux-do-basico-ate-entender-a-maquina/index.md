@@ -5,8 +5,6 @@ title: "Arch Linux: Do Básico Até Entender a Máquina (com todos os porquês)"
 comments: true
 ---
 
-# Introdução ao Arch Linux
-
 Nesse post vou mostrar passo a passo da instalação do [Arch Linux](https://archlinux.org/), levando em consideração que vou seguir o tutorial do [ArchWIKI](https://wiki.archlinux.org/title/Main_page) e explicarei algumas armadilhas que um iniciante iria facilmente cair. 
 
 Para deixar bem claro irei fazer a instalação em uma [Máquina Virtual](https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual) no meu caso usarei o [Virtual Box](https://www.virtualbox.org/), então irei pular alguns passos da instalação básicas, já que não preciso me preocupar com alguns drivers como as de rede, porque o Virtual Box transfere a rede via Ethernet do meu host no caso o meu Windows 11 para o ambiente isolado.
