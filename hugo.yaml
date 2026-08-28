@@ -1,0 +1,69 @@
+# Hugo configuration file
+title: olavob.github.io
+locale: "pt-BR"
+defaultContentLanguage: "pt-br"
+baseURL: "https://olavob.github.io"
+
+theme: hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+    main:
+      - name: Tema
+        weight: 0
+        params:
+          type: theme-toggle
+      # - name: Sobre
+      #   pageRef: /about
+      #   weight: 1
+      # - name: Arquivo
+      #   url: "/archives/"
+      #   weight: 2
+      - name: GitHub ↗
+        url: "https://github.com/olavob"
+        weight: 3
+        params:
+          icon: github
+      - name: Buscar
+        weight: 4
+        params:
+          type: search
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: false
+
+  footer:
+    displayCopyright: true
+    displayPoweredBy: true
+
+  editURL:
+    enable: false
+    base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+  
+  theme:
+    default: dark
+    displayToggle: false
+  
+  comments:
+    enable: true
+
+  author:
+    name: Olavp Bilac
+    email: olavobilac.az@gmail.com
+
+  description: "Blog do Olavo Bilac falando sobre tecnologia, carreira e coisas geek."
+
+services: 
+  disqus: 
+    shortname: 'olavodotpys-blog'

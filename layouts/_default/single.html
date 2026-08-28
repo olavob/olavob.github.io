@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
+  {{ partial "toc.html" . }}
+
+  {{ if .Title }}
+    # {{ .Title }}
+  {{ end }}
+
+{{ .Content }} 
+
+{{ partial "comments.html" . }}
+
+{{ end }}

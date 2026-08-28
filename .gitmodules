@@ -1,3 +1,3 @@
-[submodule "themes/gokarna"]
-	path = themes/gokarna
-	url = https://github.com/olavodotpy/gokarna-hugo
+[submodule "themes/hextra"]
+	path = themes/hextra
+	url = https://github.com/imfing/hextra.git
