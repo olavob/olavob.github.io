@@ -11,7 +11,7 @@ Para deixar bem claro irei fazer a instalação em uma [Máquina Virtual](https:
 
 ## Pré-Instalação - Instalando a ISO, Executando os Primeiros Comandos 
 
-![](https://www.controle.net/novo/assets/img/faq/imagem-iso-faq-o-que-e-uma-imagem-iso-controlenet.webp)
+![](imagem-iso-faq-o-que-e-uma-imagem-iso-controlenet.webp)
 
 Instalar a [ISO](https://archlinux.org/download/) é o primeiro passo para começar no Arch, mas o que é ISO? um arquivo `.iso` é uma cópia perfeita do conteúdo presente nas mídias de instalações como CD e DVD. Ou seja, é um arquivo de imagem de instalação do OS(Sistema Operacional) no caso o Arch Linux.
 
@@ -37,13 +37,13 @@ Para saber se seu [disco está em GPT ou MBR](https://www.youtube.com/watch?v=vj
 
 Assim que configurar a Máquina virtual e começar o processo de inicialização da ISO, vai aparecer a seguinte tela
 
-![](https://i.ibb.co/3mQbMWD1/Captura-de-tela-2026-03-03-222050.png)
+![](selecao-boot.png)
 
 Selecionaremos a primeira opção pois estamos usando uma imagem ISO e não uma imagem NETBOOT.
 
 Na primeira opção temos a palavra: x86_64 pois essa é a arquitetura do meu processador, que pode variar dependendo do seu hardware, ~~se o seu processador for de 32 Bits que seria o i386, você deverá instalar uma ISO própria para ela na página de download~~(informação marcada como histórica, Arch Linux não suporta mais 32 bits (i386/i686) desde o final de 2017).
 
-![](https://i.ibb.co/ZzPRpdyY/Captura-de-tela-2026-03-03-203923.png)
+![](archiso.png)
 
 Agora que selecionamos a primeira opção essa é a nossa próxima tela, e leia atentamente, estamos logados no usuário `root` chamado de `archiso` e seguindo temos os comandos para conexão de Wi-Fi no [terminal `iwctl`](https://wiki.archlinux.org/title/Iwd_(Portugu%C3%AAs)#iwctl) e também para Modem, e no final a mensagem pede para se conectar a internet para o guia online de instalação.
 
@@ -205,7 +205,7 @@ echo $SHELL
 
 ## Arch Linux: Agora é onde a mãe chora e o filho não vê
 
-![](https://i.ibb.co/Pb3rk0F/Untitled-2026-02-27-0120.png)
+![](slide-instalacao-arch.png)
 
 Esse slide eu mesmo criei no [Excalidraw](https://excalidraw.com/) e é uma forma de representar visualmente o processo de instalação do Arch no Ambiente Live/Live CD, pode parecer complicado, mas se dividirmos em partes dá para entender, por isso vou explicar com calma cada ponto, e depois falarei do fluxo e como vamos juntar cada um deles para fazer a instalação.
 
@@ -219,9 +219,7 @@ Esse slide eu mesmo criei no [Excalidraw](https://excalidraw.com/) e é uma form
  
 ### GRUB e Sistema UEFI/EFI
 
-Essa é a camada um pouco superior ou seja, mais para fora do Sistema Linux, coloquei desse jeito para facilitar a explicação, mas na real cada camada é apenas mais libs e novos componentes para encorpar mais o sistema. E se observamos no slide, essa parte está mais "acima" dos outros e  
-
-o GDM, Wayland e Gnome que estão ainda mais acima, seria a camada "mais alta" deles, que representa o ambiente gráfico, como a área e trabalho que é uma interface GUI que forra a visão do usuário para as outras camadas mais "abaixo" do sistema, faremos a instalação deles no final do post, por isso vamos ignora-los por enquanto.
+Essa é a camada um pouco superior ou seja, mais para fora do Sistema Linux, coloquei desse jeito para facilitar a explicação, mas na real cada camada é apenas mais libs e novos componentes para encorpar mais o sistema. E se observamos no slide, essa parte está mais "acima" dos outros e o GDM, Wayland e Gnome que estão ainda mais acima, seria a camada "mais alta" deles, que representa o ambiente gráfico, como a área e trabalho que é uma interface GUI que forra a visão do usuário para as outras camadas mais "abaixo" do sistema, faremos a instalação deles no final do post, por isso, vamos ignora-los por enquanto.
 
 Ambos esses processos ocorrem na primeira etapa do sistema, na inicialização. O UEFI é o substituto da BIOS ou seja, nela estamos inicializando os Drivers do Computador, o Secure Boot e o suporte a disco tanto o mais recente GPT quanto o mais antigo MBR, que irei detalhar eles mais tarde. 
 
@@ -233,11 +231,11 @@ Existe um suporte a um gerenciador de boot no UEFI que seria o [rEFInd](https://
 
 É um comando [Unix-like](https://en.wikipedia.org/wiki/Unix-like) que significa Change Root. Esse comando vai mudar o root do processo atual e seus filhos. "Perai, filhos? como assim?", isso mesmo, o "/" Root é o diretório Pai ou Raiz do nosso sistema, e os seus filhos são os Sub diretórios do pai, fica mais fácil compreender observando como uma árvore mesmo, Raiz e folhas.
 
-![](https://blog.desdelinux.net/wp-content/uploads/2012/01/arbol-directorios1.png)
+![](arbol-directorios1.png)
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA1yVkOMy1z4Qvi-NAb-j1JCmsnUo8xy7zx6_Dkb_Qix7nSHIKCwg3rjwn8PhaO6f7dwktwtY6LJZVRAljLScbXSZv2VU8gM2k3VOicvBS6w-7GARPeJ0DN5Opoozbe8IBjGx7UqT38Tk/s640/hierarquia_linux.png)
+![](hierarquia_linux.png)
 
-Com essas imagens fica mais fácil saber o porquê e onde modificar ou criar um arquivo de configuração para os diretórios padrões do Arch. A nível de curiosidade, esse padrão de árvores é uma [estrutura de dados](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*DAoQrt1ja_JMDQUxN3sboA.png) chamados de [Trees](https://pt.wikipedia.org/wiki/%C3%81rvore_(estrutura_de_dados)) e está presente em variados lugares, como em [Linguagens de programação Orientadas a Objetos](https://miro.medium.com/v2/resize:fit:640/format:webp/0*2zyGAstAusuPwlAM.gif), em todo o tipo de sistema de arquivos, como nos de Windows e no [DOM](https://miro.medium.com/v2/resize:fit:1400/1*mMmuOhNytgqP7lrU9HPTpw.jpeg) de HTML.
+Com essas imagens fica mais fácil saber o porquê e onde modificar ou criar um arquivo de configuração para os diretórios padrões do Arch. A nível de curiosidade, esse padrão de árvores é uma [estrutura de dados](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*DAoQrt1ja_JMDQUxN3sboA.png) chamados de [Trees](https://pt.wikipedia.org/wiki/%C3%81rvore_(estrutura_de_dados)) e está presente em variados lugares, como em [Linguagens de programação Orientadas a Objetos](https://miro.medium.com/v2/resize:fit:640/format:webp/0*2zyGAstAusuPwlAM.gif), em todo o tipo de sistema de arquivos, como nos de Windows e nos elementos [DOM](https://miro.medium.com/v2/resize:fit:1400/1*mMmuOhNytgqP7lrU9HPTpw.jpeg) de HTML.
 
 Geralmente quem veio do Windows enxerga o Sistema Operacional como algo Fixo, que é imutável, porém essa visão é equivocada, o root do sistema ou seja o diretório raiz de um OS é apenas uma pasta com muitos arquivos espalhados de forma recursiva.
 
@@ -253,9 +251,7 @@ Primeiro vamos particionar nosso disco dentro do ambiente live.
 
 Não vou entrar muito em detalhes sobre [Dispositivos de Blocos](https://www.cs.yale.edu/homes/aspnes/pinewiki/BlockDevices.html), pois é um assunto complexo, com uma dificuldade insalubre, que dá um post 10x maior que esse. Porém pense que para um computador, dados são manipulados em Blocos de Bytes e Bits e são persistentes e de tamanho fixo (512B ou 4K). Por exemplo um HD Sata é um dispositivo de bloco.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/WD5000AAKX_16MB_Buffer.jpg/960px-WD5000AAKX_16MB_Buffer.jpg)
-
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFXiJMaJ6b-8hLsMUJC_CCX1Im4_o_jpJhiA&s)
+![](hd-sata-exemplo.jpg)
 
 Isso é o básico para se saber o que é uma [Unidade de Disco Rígido](https://pt.wikipedia.org/wiki/Unidade_de_disco_r%C3%ADgido). No começo do I/O(Input e Output) esses blocos são mantidos temporariamente na RAM para a otimização das operações do sistema operacional, esse estado temporário é chamado de Buffer.
 
@@ -266,6 +262,9 @@ Não vou me alongar muito sobre nomes de dispositivos de armazenamento, porém a
 `/dev/sda1` seria a partição `1` no dispositivo ``a``.
 
 Como estou em uma máquina virtual, meu dispositivo de armazenamento vai ser um HD SATA, mas na prática a maioria dos computadores modernos, provavelmente vão estar equipados com um SSD, pois oferece ganho de desempenho e [durabilidade mecânica](https://recoverydata.com.br/blog/quanto-tempo-dura-um-hd-e-sua-vida-util/#:~:text=Em%20geral%2C%20a%20maioria%20dos,que%20isso%20com%20cuidados%20adequados.) pois um HD externo, por exemplo precisa de um imã e um disco para ler dados, fazendo ele ser muito sensível.  
+
+
+![](hd-interior.jpg)
 
 Então apenas o nome muda, sendo [NVMe](https://wiki.archlinux.org/title/Device_file_(Portugu%C3%AAs)#NVMe), Como não vou fazer uma instalação usando o SSD, vou apenas deixar claro que provavelmente apenas o nome vai mudar junto com a ordem de reconhecimento.
 
@@ -600,10 +599,10 @@ Agora finalizando apenas execute `sudo reboot`. O GDM é identificado, carregand
 
 Com isso entramos no ambiente do Gnome. 
 
-![](https://i.ibb.co/ccPjKpd8/Captura-de-tela-2026-03-05-011156.png)
+![](finalizado-setupgnome.png)
 
 # Finalizando
 
-Fizemos a instalação completa do Arch Linux, do kernel e as partições até o ambiente gráfico. Existem muitas coisas para fazer dentro do sistema já pronto, como a personalização para deixar as coisas ainda mais bonitas, colocar ``themes`` e ``icons`` no Gnome e o pacote de configuração do [Power Level 10k](https://hashir.blog/assets/final-starship-catppuccin.zPCjMxUN_2c1PrT.webp) no emulador de terminal. 
+Fizemos a instalação completa do Arch Linux, do kernel e as partições até o ambiente gráfico.
 
-Além de um ecossistema de trabalho para programador com ferramenta como Git, ASDF, Docker, LazyVim, Banco de dados e ZSH, tudo integrado via terminal, mas isso é assunto para outro post.
+Agora que você chegou aqui, existem muitas coisas para fazer dentro do sistema já pronto, que não abordei nesse post, como a personalização para deixar as coisas ainda mais bonitas, colocar ``themes`` e ``icons`` no Gnome e o pacote de configuração do [Power Level 10k](https://hashir.blog/assets/final-starship-catppuccin.zPCjMxUN_2c1PrT.webp) com ZSH no emulador de terminal.

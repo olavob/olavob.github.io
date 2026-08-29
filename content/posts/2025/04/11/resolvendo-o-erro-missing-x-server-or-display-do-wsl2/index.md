@@ -1,11 +1,11 @@
 ---
 date: 2025-06-12T01:11:42-03:00
 draft: false
-title: 'Resolvendo o Erro: "Missing X Server or Display" Do WSL2'
+title: 'WSL2: Resolvendo o Erro: "Missing X Server or Display" Do WSL2'
 comments: true
 ---
 
-## Contexto do Problema
+# Contexto do Problema
 
 Essa documentação foi criada porque estou mexendo com a parte de redes de sockets, IP, portas e Servidores HTTP. Que coincidentemente bateu com a resolução desse problema. Porém vamos deixar de lado a parte dos servidores HTTP e vamos falar de outro servidor, o X.
 
@@ -19,7 +19,7 @@ E claro, pensando no melhor dos dois mundos, configurar ambientes gráficos roda
 
 E esse é o motivo de toda a documentação da resolução do erro ``Missing X server or $DISPLAY```.
 
-## Configurações e Detalhes do Servidor X
+# Configurações e Detalhes do Servidor X
 
 O X é um servidor remoto que gerencia e implementa ambientes gráficos para os monitores. Em em sistema operacional temos dispositivos como teclado, mouse e a tela. Uma tela é gerenciada por um programa de servidor, que exibe recursos para outros programas que se conectam a ele.
 
@@ -47,7 +47,7 @@ O número de exibição deve ser sempre dado em exibição.screennumber. Alguns 
 
 ```:0.0``` significa que estamos falando da primeira tela anexada à seu primeiro display no seu host local.
 
-## Soluções Tentadas
+# Soluções Tentadas
 
 Primeiramente fui pesquisar em fóruns a causa do problema, e as respostas sempre foram em CentOS ou Ubuntu, nada relacionado ao servidor X no WSL/Archlinux. Sem outra medida, e com a pressa de resolver o problema, perguntei para IAs como Deepseek e ChatGPT, mais especificamente o Deepseek, que me mandou prompts para mudar a versão do WSL, e ficou me gerando respostas em loop para fazer export do localhost no $DISPLAY, o que é totalmente inútil para resolução e como disse, se eu tivesse feito isso, com certeza eu não teria resolvido no mesmo dia. 
 
@@ -69,7 +69,7 @@ chromium --no-sandbox --disable-dev-shm-usage --use-gl=angle --disable-gpu
 
 E mesmo assim o erro se repetia, me forçando a pensar mais a fundo. 
 
-## Resolução do Erro
+# Resolução do Erro
 
 Esse comando ```export``` pega o valor da variável nameserver dentro de ```/etc/resolv.conf``` e coloca como valor da nossa variável de ambiente
 $DISPLAY. Então, vamos começar a destrinchar para entendermos o erro bobo que não vemos.
@@ -90,7 +90,7 @@ Bem, esse é o ponto crítico, a parte fácil que não sabemos. Agora vamos colo
 
 O comando Export é a pior forma de resolver esse problema no WSL, porém deu a mim a pista mais importante da resolução já que o $DISPLAY precisava de um IP para que o meu WSL pudesse se comunicar com o VcXsrv. Vamos dividir a resoluição em passos para facilitar.
 
-#### Passo 1: Identificar o IP do Host Windows  
+## Passo 1: Identificar o IP do Host Windows  
 
 Vamos pegar o endereço IP do Windows para a comunicação com o WSL2 que usa a tecnologia de virtualização Hyper-v. Dentro de um powerShell execute:
 
@@ -110,7 +110,7 @@ e pegar o endereço IP:
 IPAddress         : 172.23.112.1
 ```
 
-#### Passo 2: Configurar o $DISPLAY no Shell  
+## Passo 2: Configurar o $DISPLAY no Shell  
 
 Para a insistência já que o resolv.conf é modificado automaticamente após a incialização, no seu ```.bashrc``` ou ```.zshrc``` adicione no final:
 
@@ -119,7 +119,7 @@ echo 'export DISPLAY=172.23.112.1:0.0' >> ~/.bashrc
 source ~/.bashrc  
 ```
 
-#### Passo 3: Testar o Ambiente Gráfico 
+## Passo 3: Testar o Ambiente Gráfico 
 
 Não se esqueça de estar com o servidor X ligado no Windows sempre que for usar o ambiente gráfico. execute o chromium ou seu aplicativo grafico:
 
@@ -127,14 +127,14 @@ Não se esqueça de estar com o servidor X ligado no Windows sempre que for usar
 chromium  
 ```
 
-![Imagem do servidor funcionando](https://i.ibb.co/5gpX7HLK/Resolved-xserver-error.png)
+![](Resolved-xserver-error.png)
 
 E lá está... funcionando perfeitamente. Resolver um problema após horas de tentantiva e erro é muito aliviante, é como receber uma notícia boa.
 
 A sequir um extra, um problema que topei no meio do caminho, mas é mais falta de atenção mesmo, já que basta apenas marca a opção correta da configuração do servidor:
 
-## Problemas Comuns e Soluções
+# Problemas Comuns e Soluções
 
-#### Erro: "Authorization required, but no authorization protocol specified"
+## Erro: "Authorization required, but no authorization protocol specified"
 - Cause: Controle de acesso do X Server ativo.  
 - Solução: Marque **Disable access control** no VcXsrv.

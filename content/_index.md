@@ -20,7 +20,11 @@ toc: false
 ## Todos os posts
 
 {{< cards >}}
-  {{< card link="/posts/" title="Ver tudo" subtitle="Lista completa de artigos publicados" >}}
+  {{< card link="/posts/" title="Ver todos Posts" subtitle="Lista completa de artigos publicados" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="/off-topic/" title="Ver todos os Off-topics" subtitle="Lista completa de artigos Off-topics" >}}
 {{< /cards >}}
 
 ## O que você encontrará por aqui
