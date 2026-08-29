@@ -2,13 +2,28 @@
 toc: false
 ---
 
-# Posts
+## Destaques
 
 {{< cards >}}
-{{< card link="/posts/" title="Todos os posts" subtitle="Veja todos os artigos publicados" >}}
+  {{< card
+    link="/posts/2026/03/05/arch-linux-do-basico-ate-entender-a-maquina"
+    title="Arch Linux: Do Básico Até Entender a Máquina"
+    subtitle="Um guia completo, com todos os porquês, não só o passo a passo, mas o que está acontecendo por baixo."
+  >}}
+  {{< card
+    link="/posts/2026/08/27/wsl2-setup-para-dev-no-windows-configurando-e-instalando-arch-linux"
+    title="WSL2: Setup para Dev no Windows"
+    subtitle="Configurando e instalando Arch Linux no WSL2, do zero até um ambiente de dev funcional. Com ZSH, P10k e Mise en Place"
+  >}}
 {{< /cards >}}
 
-# O que você encontrará por aqui
+## Todos os posts
+
+{{< cards >}}
+  {{< card link="/posts/" title="Ver tudo" subtitle="Lista completa de artigos publicados" >}}
+{{< /cards >}}
+
+## O que você encontrará por aqui
 
 Este não é um blog focado em notícias ou conteúdo superficial.
 

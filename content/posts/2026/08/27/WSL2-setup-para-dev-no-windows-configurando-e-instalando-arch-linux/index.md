@@ -184,7 +184,7 @@ Primeiramente trocaremos o perfil padrão dentro do menu de inicialização nas 
 
 Pressione as teclas `ctrl + ,` no terminal para abrir as configurações, e em "inicialização" encontre "perfil padrão" e troque para `archlinux`. Assim sempre que o terminal é inicializado o Arch carregará automaticamente.
 
-![800](https://i.ibb.co/C3XPtPh5/perfil-padr-o.png)
+![](perfil-padrao.png)
 
 #### Alterando Tema do Terminal
 
@@ -223,7 +223,7 @@ Depois de colar o tema, dentro do **Bloco de notas** vá em `Arquivos` no canto 
 
 Agora dentro das configurações do terminal, localize  `esquema de cores`, e clique no tema que foi salvo, vá em ``definir como padrão`` e salve.
 
-![](https://i.ibb.co/tPxfrCZY/terminal-meslolgsnf.png)
+![](terminal-meslolgsnf.png)
 
 Agora quando reiniciarmos o terminal, o Linux irá ser iniciado e o tema será aplicado.
 
@@ -295,7 +295,7 @@ Para atualização de pacotes no `pacman` se usa a flag `-Syu` e no `yay` é sim
 yay
 ```
 
-![](https://i.ibb.co/JFKFfynS/yay.png)
+![](yay.png)
 
 Mesmo com o ZSH instalado se dermos `echo $SHELL` ainda aparecerá que estamos usando o Bash, isso porque ainda não trocamos de fato de Shell.
 
@@ -317,7 +317,7 @@ source .zshrc
 
 ##### Instalando Power Level 10k
 
-![800](https://i.ibb.co/gZ1LT49T/prompt-styles-high-contrast.png)
+![](prompt-styles-high-contrast.png)
 
 Essa parte é completamente opcional, porém recomendo bastante instalar o tema Powerlv10k para ter uma melhor experiência ao usar o terminal, e acredite, é insuportável usar aquele terminal simples com cor única, não dá pra trabalhar assim, eu mesmo quando comecei a usar temas nunca mais voltei atrás.
 
@@ -339,7 +339,7 @@ Antes de recarregar o arquivo `.zshrc` novamente, vamos baixar o conjunto de fon
 
 Para explicar melhor esse conjunto de fontes, precisamos ver primeiro a tabela Unicode de Emoji.
 
-![433](https://i.ibb.co/vCt4XzkK/printing-emoji-characters-unicode-codepoint-lucee5.png)
+![](printing-emoji-characters-unicode-codepoint-lucee5.png)
 
 Cada caractere Unicode corresponde a um emoji, ou seja, quando utilizamos um emoji, ele não é um PNG salvo no seu celular, mas sim um ícone representado por códigos, é só, por exemplo digitar: `U+1F60E`, para o dispositivo que tem as fontes instalado, aparecerá o emoji. 
 
@@ -347,7 +347,7 @@ Para o servidor ou pagina web, são apenas caracteres, zero custo.
 
 A mesma coisa representa para ícones no Nerd Fonts:
 
-![336](https://i.ibb.co/svNNdQtB/nerd-fonts-icons-in-terminal.png)
+![](nerd-fonts-icons-in-terminal.png)
 
 >Porque usar caracteres únicos para catalogar ícones?
 
@@ -359,7 +359,7 @@ A instalação das fontes é feito no **Windows**, já que vai ser o **Windows T
 
 Acesse esse [LINK](https://github.com/romkatv/powerlevel10k#manual-font-installation) e instale cada uma das 4 fontes listadas no Github.
 
-![538](https://i.ibb.co/BKrCW5jt/Captura-de-tela-2026-08-26-215526.png)
+![](file-explore-nf.png)
 
 Vá para a pasta de Downloads, **Selecione Tudo** e clique em **Instalar**.
 
@@ -369,7 +369,7 @@ Na configuração do perfil, scrolla pra baixo e achará "Aparência" em "Config
 
 Uma vez lá dentro, na categoria "Texto", tire "Consolas" e selecione "MesloLGS NF".
 
-![800](https://i.ibb.co/tPxfrCZY/terminal-meslolgsnf.png)
+![](terminal-meslolgsnf.png)
 
 Concluirmos a instalação das fontes, mas para ser aplicado no terminal, vamos recarregar o arquivo de configuração do Shell para realizar o wizard de configuração do P10k.
 
@@ -381,7 +381,7 @@ O wizard de configuração vai ser iniciado, e não tem segredo, vai ser apenas 
 
 Observe o exemplo a seguir:
 
-![511](https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/configuration-wizard.gif)
+![](configuration-wizard.gif)
 
 Como você vai perceber, no inicio do wizard tem um teste pra se certificar que o usuário possui o Nerd Fonts Instalado. Como perguntar se vimos um símbolo de diamante.
 
@@ -393,17 +393,17 @@ Atualmente, alguns comandos de linha de comando, como o `ls` e `cat` possuem alt
 
 Observe as mudanças visuais no comando `ls`, que lista todos os arquivos e diretórios que estão presentes no sistema:
 
-![647](https://i.ibb.co/JRNPKYTS/exa-ls.png)
+![](exa-ls.png)
 
 Veja que o seu substituto, o `exa` utiliza esquema de cores e também ícones NF.
 
-outro comando modificado foi o comando c que exibi o conteúdo de um arquivo diretamente no terminal, sem a necessidade de abri-lo:
+Outro comando modificado foi o comando `cat` que exibi o conteúdo de um arquivo diretamente no terminal, sem a necessidade de abri-lo:
 
-![746](https://i.ibb.co/dJmrXjkc/bat-cat.png)
+![](bat-cat.png)
 
 Dá pra observar claramente que o texto foi estilizado pelo substituto `bat`, e está mais coerente, com formatações que simulam um editor de arquivo mais moderno.
 
-Consegui te convencer a instala-los? então vamos lá.
+>Consegui te convencer a instala-los? então vamos lá.
 
 ```bash
 yay -S exa bat
