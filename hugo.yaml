@@ -45,6 +45,24 @@ menu:
         url: "/posts/"
 
 params:
+  comments:
+    enable: false
+    type: giscus
+
+    giscus:
+      repo: "olavob/olavob.github.io"
+      repoId: "R_kgDOO6MBAw"
+      category: "Announcements"
+      categoryId: "DIC_kwDOO6MBA84DJ8yR"
+      data-mapping: "pathname"
+      data-strict: "0"
+      data-reactions-enabled: "1"
+      data-emit-metadata: "0"
+      data-input-position: "top"
+      data-theme: "dark"
+      data-lang: "pt"
+      crossorigin: "anonymous"
+
   navbar:
     displayTitle: true
     displayLogo: false
@@ -68,9 +86,6 @@ params:
   theme:
     default: dark
     displayToggle: false
-  
-  comments:
-    enable: true
 
   author:
     name: Olavp Bilac
