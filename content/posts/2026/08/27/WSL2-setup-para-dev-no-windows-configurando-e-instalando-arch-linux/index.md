@@ -21,7 +21,7 @@ O WSL (Windows Subsystem for Linux ou, em português, Subsistema do Windows para
 
 Nesse post irei abordar a instalação do WSL 2 usando Arch Linux, e configurar um ambiente para desenvolvedor mais versátil e organizado para Windows 10 ou superior.
 
-#### Nota
+> [!IMPORTANT]
 >Antes de explorar o WSL, eu recomendo primeiro passar pelo processo de instalação e primeiras impressões de qualquer distribuição Linux nativo ou emulado por um tempo pra se familiarizar e praticar o POSIX, que são todos os comandos que um terminal suporta, pois não iremos ter ambiente gráfico e faremos tudo pelo terminal
 
 ## Porque Arch Linux?
@@ -31,10 +31,9 @@ O Arch Linux ou outras distros baseado nele como Manjaro e EndevourOS, contém u
 Por exemplo, o sistema Ubuntu baseado em Debian, conhecido por ser mais amigável para iniciante, utiliza como gerenciador de pacotes o APT, propriedade da Canonical e mais restrito por não ser livre, tendo um número limitado de alternativas de software. 
 
 Uma das outras vantagens do Arch é a leveza, nada é instalado por padrão, tendo mais economia. E controle maior no seu próprio sistema, por te forçar a fazer tudo "na mão", nada é configurado automaticamente.
-#### Nota
->A imagem oficial do [Arch Linux](https://gitlab.archlinux.org/archlinux/archlinux-wsl) foi oficialmente lançada para WSL2 em abril de 2025. Ela é mantida e atualizada mensalmente pela equipe do Arch Linux
- 
->Antes de termos a imagem oficial, era usado a imagem não oficial chamado [ArchWSL de yuk7](https://github.com/yuk7/archWSL) **mas essa opção agora é mais instável e não recomendado**  
+
+> [!NOTE]
+>A imagem oficial do [Arch Linux](https://gitlab.archlinux.org/archlinux/archlinux-wsl) foi oficialmente lançada para WSL2 em abril de 2025. Ela é mantida e atualizada mensalmente pela equipe do Arch Linux Antes de termos a imagem oficial, era usado a imagem não oficial chamado [ArchWSL de yuk7](https://github.com/yuk7/archWSL) **mas essa opção agora é mais instável e não recomendado**  
 
 ## Instalando o WSL 2 e Configurações Iniciais
 ### Dependências
@@ -57,7 +56,7 @@ Clique em Ok para confirmar.
 
 e reinicie o PC.
 
-#### Nota
+> [!NOTE]
 >Nesta nova versão da Store do WSL2, não iremos habilitar a opção de recurso: `Subsistema do Windows para Linux`, ~~pois ela não é mais necessária.~~(para usuários que possuem build do Windows 10 muito antigas ou exóticas, vale ler a [documentação oficial](https://learn.microsoft.com/pt-br/windows/wsl/install-manual) para a instalação, aconselho que se deite em posição fetal e chore um pouco e boa sorte)
 
 #### Instalando o Emulador de Terminal

@@ -2,6 +2,16 @@
 toc: false
 ---
 
+{{< hextra/hero-headline >}} 
+
+O que você encontrará por aqui {{< /hextra/hero-headline >}}
+
+Este blog é, antes de tudo, o meu bloco de anotações: escrevo para mim mesmo, para registrar o que configurei e para documentar as matérias mais pesadas de Ciência da Computação. Escrever o conteúdo com as minhas próprias palavras, com exemplos e código, é o que me força a entender de fato o assunto, e o resultado fica como material de revisão.
+
+O conteúdo é variado, os textos documentam experiências práticas, configurações e soluções reproduzíveis: o ambiente, os comandos, os pontos em que algo falhou e o que corrigiu. Sempre que possível, explico não só o que fazer, mas por que funciona (o mecanismo por trás da solução).
+
+Explore e leia o que parecer interessante.
+
 ## Destaques
 
 {{< cards >}}
@@ -16,23 +26,3 @@ toc: false
     subtitle="Configurando e instalando Arch Linux no WSL2, do zero até um ambiente de dev funcional. Com ZSH, P10k e Mise en Place"
   >}}
 {{< /cards >}}
-
-## Todos os posts
-
-{{< cards >}}
-  {{< card link="/posts/" title="Ver todos Posts" subtitle="Lista completa de artigos publicados" >}}
-{{< /cards >}}
-
-{{< cards >}}
-  {{< card link="/off-topic/" title="Ver todos os Off-topics" subtitle="Lista completa de artigos Off-topics" >}}
-{{< /cards >}}
-
-## O que você encontrará por aqui
-
-Este não é um blog focado em notícias ou conteúdo superficial.
-
-Eu escrevo sobre experiências práticas, configurações e soluções que possam ser reproduzidas por outras pessoas. Quando possível, explico não apenas o que fazer, mas também por que funciona.
-
-Os conteúdos podem variar bastante, desde uma configuração específica do Linux até uma análise mais detalhada de uma ferramenta ou equipamento.
-
-Explore o blog, leia o que parecer interessante e, se alguma coisa aqui for útil para você, já valeu a pena escrever.

@@ -301,7 +301,8 @@ SWAP = (Opcional mas no mínimo 3G)
 "/" Root = o espaço que sobrou (Recomendado 60G)
 ```
 
-#### ATENÇÃO: NÃO CRIE UMA PARTIÇÃO EFI SE ESTIVER FAZENDO DUAL BOOT
+> [!CAUTION]
+>NÃO CRIE UMA PARTIÇÃO EFI SE ESTIVER FAZENDO DUAL BOOT
 
 ```
 fdisk /dev/sda
@@ -363,7 +364,8 @@ mkswap /dev/sda2
 
 Por último vamos formatar a partição de sistema EFI com o formato padrão FAT32
 
-#### ATENÇÃO: APENAS FORMATE O SEU EFI SE O CRIOU ANTES, NÃO FORMATE A PARTIÇÃO EFI SE ESTIVER FAZENDO DUAL BOOT
+> [!CAUTION]
+>APENAS FORMATE O SEU EFI SE O CRIOU ANTES, NÃO FORMATE A PARTIÇÃO EFI SE ESTIVER FAZENDO DUAL BOOT
 
 ```
 mkfs.fat -F 32 /dev/sda1

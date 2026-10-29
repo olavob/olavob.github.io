@@ -53,8 +53,13 @@ params:
     displayCopyright: true
     displayPoweredBy: true
     copyright: "© 2026 Olavo Bilac. Todos os direitos reservados."
-
-
+  
+  imageZoom:
+    enable: true
+  
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: wide
 
   editURL:
     enable: false
